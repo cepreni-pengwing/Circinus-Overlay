@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_window_small_up",
+  "textures": {
+    "bottom": "circinus:block/rusty_light_blue_metal",
+    "side": "circinus:block/rusty_light_blue_metal",
+    "top": "circinus:block/rusty_light_blue_metal"
+  }
+}

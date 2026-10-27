@@ -1,0 +1,6 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_slab_bottom_2",
+  "textures": {
+    "side": "circinus:block/irregular_sandstone_tiles"
+  }
+}

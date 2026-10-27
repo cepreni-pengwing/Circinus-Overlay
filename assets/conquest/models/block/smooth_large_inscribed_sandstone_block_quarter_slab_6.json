@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_slab_quarter_6",
+  "textures": {
+    "bottom": "circinus:block/smooth_large_inscribed_sandstone_block",
+    "side": "circinus:block/smooth_large_inscribed_sandstone_block",
+    "top": "circinus:block/smooth_large_inscribed_sandstone_block"
+  }
+}

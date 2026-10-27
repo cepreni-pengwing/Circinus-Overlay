@@ -1,0 +1,6 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_capital_up_flat",
+  "textures": {
+    "side": "circinus:block/irregular_sandstone_tiles"
+  }
+}

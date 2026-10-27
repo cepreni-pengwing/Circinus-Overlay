@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_capital_down_flat",
+  "textures": {
+    "bottom": "circinus:block/weathered_light_blue_metal",
+    "side": "circinus:block/weathered_light_blue_metal",
+    "top": "circinus:block/weathered_light_blue_metal"
+  }
+}

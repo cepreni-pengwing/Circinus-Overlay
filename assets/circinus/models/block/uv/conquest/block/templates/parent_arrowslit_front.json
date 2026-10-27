@@ -1,0 +1,13 @@
+{
+  "parent": "block/block",
+  "loader": "porting_lib:obj",
+  "model": "conquest:models/obj/arrowslit_front.obj",
+  "emissive_ambient": true,
+  "flip_v": true,
+  "textures": {
+    "particle": "#side",
+    "side": "#side",
+    "top": "#side",
+    "bottom": "#side"
+  }
+}

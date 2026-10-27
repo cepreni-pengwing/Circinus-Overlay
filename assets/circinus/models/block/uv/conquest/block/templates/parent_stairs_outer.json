@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/minecraft/block/outer_stairs",
+  "textures": {
+    "side": "minecraft:block/acacia_planks",
+    "bottom": "#side",
+    "top": "#side"
+  }
+}

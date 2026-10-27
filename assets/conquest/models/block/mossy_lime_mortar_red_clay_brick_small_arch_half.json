@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_small_arch_half",
+  "textures": {
+    "bottom": "circinus:block/weathered_dark_blue_metal",
+    "side": "circinus:block/weathered_dark_blue_metal",
+    "top": "circinus:block/weathered_dark_blue_metal"
+  }
+}

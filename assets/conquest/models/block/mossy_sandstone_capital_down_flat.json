@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_capital_down_flat",
+  "textures": {
+    "bottom": "circinus:block/mossy_sandstone",
+    "side": "circinus:block/mossy_sandstone",
+    "top": "circinus:block/mossy_sandstone"
+  }
+}

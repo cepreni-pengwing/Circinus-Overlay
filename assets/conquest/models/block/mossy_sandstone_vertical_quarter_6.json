@@ -1,0 +1,70 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "block/block",
+  "textures": {
+    "north": "circinus:block/mossy_sandstone",
+    "south": "circinus:block/mossy_sandstone",
+    "east": "circinus:block/mossy_sandstone",
+    "west": "circinus:block/mossy_sandstone",
+    "top": "circinus:block/mossy_sandstone",
+    "bottom": "circinus:block/mossy_sandstone",
+    "particle": "circinus:block/mossy_sandstone"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#east"
+        },
+        "south": {
+          "texture": "#south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#top",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#bottom",
+          "cullface": "down"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        45,
+        0
+      ],
+      "translation": [
+        4,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    }
+  }
+}

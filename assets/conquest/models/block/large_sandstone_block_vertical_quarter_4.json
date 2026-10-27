@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_vertical_quarter_4",
+  "textures": {
+    "bottom": "circinus:block/rusty_dark_blue_metal",
+    "side": "circinus:block/rusty_dark_blue_metal",
+    "top": "circinus:block/rusty_dark_blue_metal"
+  }
+}

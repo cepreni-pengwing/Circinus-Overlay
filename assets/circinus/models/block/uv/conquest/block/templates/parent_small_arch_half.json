@@ -1,0 +1,9 @@
+{
+  "parent": "circinus:block/uv/minecraft/block/parent_small_arch_half",
+  "textures": {
+    "side": "block/acacia_planks",
+    "texture": "#side",
+    "particle": "#side",
+    "top": "#side"
+  }
+}

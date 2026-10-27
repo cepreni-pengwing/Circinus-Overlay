@@ -1,0 +1,82 @@
+{
+  "textures": [
+    {
+      "name": "mossy_sandstone",
+      "display_name": "Green Metal Plating",
+      "asset": "blue_metal_plate",
+      "color": "#0c3f33",
+      "grid": [32, 32],
+      "erosion": 0.12,
+      "targets": ["conquest:mossy_sandstone"]
+    },
+    {
+      "name": "irregular_sandstone_tiles",
+      "display_name": "Dark Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0a1126",
+      "grid": [32, 32],
+      "erosion": 0,
+      "targets": ["conquest:irregular_sandstone_tiles"]
+    },
+    {
+      "name": "smooth_large_inscribed_sandstone_block",
+      "display_name": "Light Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0278a4",
+      "grid": [32, 32],
+      "erosion": 0,
+      "targets": ["conquest:smooth_large_inscribed_sandstone_block"]
+    },
+    {
+      "name": "large_inscribed_sandstone_block",
+      "display_name": "White Metal",
+      "asset": "rusty_metal_04",
+      "color": "#fffffd",
+      "grid": [32, 32],
+      "erosion": 0.12,
+      "targets": ["conquest:large_inscribed_sandstone_block"],
+      "detail": 0.45,
+      "flatten": 48
+    },
+    {
+      "name": "rusty_light_blue_metal",
+      "display_name": "Rusty Light Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0278a4",
+      "grid": [32, 32],
+      "rust": "full",
+      "targets": ["conquest:smooth_large_sandstone_block"],
+      "rust_asset": "rusty_metal_04"
+    },
+    {
+      "name": "rusty_dark_blue_metal",
+      "display_name": "Rusty Dark Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0a1126",
+      "grid": [32, 32],
+      "rust": "full",
+      "targets": ["conquest:large_sandstone_block"],
+      "rust_asset": "rusty_metal_04"
+    },
+    {
+      "name": "weathered_light_blue_metal",
+      "display_name": "Weathered Light Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0278a4",
+      "grid": [32, 32],
+      "rust": "light",
+      "targets": ["conquest:brown_sandstone_cobble"],
+      "rust_asset": "rusty_metal_04"
+    },
+    {
+      "name": "weathered_dark_blue_metal",
+      "display_name": "Weathered Dark Blue Metal",
+      "asset": "rusty_metal_02",
+      "color": "#0a1126",
+      "grid": [32, 32],
+      "rust": "light",
+      "targets": ["conquest:mossy_lime_mortar_red_clay_brick"],
+      "rust_asset": "rusty_metal_04"
+    }
+  ]
+}

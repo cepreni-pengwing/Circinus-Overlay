@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_wall_inventory",
+  "textures": {
+    "bottom": "circinus:block/large_inscribed_sandstone_block",
+    "side": "circinus:block/large_inscribed_sandstone_block",
+    "top": "circinus:block/large_inscribed_sandstone_block"
+  }
+}
