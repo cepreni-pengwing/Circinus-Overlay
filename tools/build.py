@@ -39,6 +39,12 @@ class Assets:
             out.append(l)
         return out
 
+    def raw(self, path):
+        for z, n in zip(self.zips, self.names):
+            if path in n:
+                return z.read(path).decode('utf-8', 'replace')
+        return None
+
     def list(self, prefix):
         return sorted({x for n in self.names for x in n if x.startswith(prefix)})
 
@@ -249,13 +255,14 @@ def process(t, size):
     r = e if rust else ImageChops.subtract(e, w)
     if t.get('uniform_pbr'):
         r = Image.new('L', size, 255)
-    det = t.get('detail', 0.7)
-    s = ImageMath.lambda_eval(lambda a: a['min'](a['max'](1 + ((a['y'] / py) * (1 - a['e'] / 255) + a['e'] / 255 - 1) * det, 0.5), 1.5), y=F(y), e=F(e))
+    det = t.get('detail', 0.7) * t.get('contrast', 1.0)
+    s = ImageMath.lambda_eval(lambda a: a['min'](a['max'](1 + ((a['y'] / py) * (1 - a['e'] / 255) + a['e'] / 255 - 1) * det, 0.35), 1.65), y=F(y), e=F(e))
     if t.get('flatten'):
         sb = s.point(lambda v: v * 127).convert('L').filter(ImageFilter.GaussianBlur(t['flatten']))
         s = ImageMath.lambda_eval(lambda a: a['s'] * 127 / a['max'](a['b'], 1), s=s, b=F(sb))
     col = tuple(int(t['color'].lstrip('#')[i:i + 2], 16) for i in (0, 2, 4))
-    painted = Image.merge('RGB', [ImageMath.lambda_eval(lambda a, c=c: a['s'] * c, s=s).convert('L') for c in col])
+    lift = t.get('lift', 40)
+    painted = Image.merge('RGB', [ImageMath.lambda_eval(lambda a, c=c: a['s'] * c + (a['s'] - 1) * lift, s=s).convert('L') for c in col])
     diffuse = Image.composite(rust[0] if rust else rgb, painted, w).convert('RGBA')
     a_r, a_g, a_b = arm.split()
     arm = Image.composite(Image.new('RGB', size, (median(a_r, paint), median(a_g, paint), median(a_b, paint))), arm, r)
@@ -301,6 +308,8 @@ def main():
     a = Assets(sources(sys.argv))
     for g in GENERATED:
         shutil.rmtree(os.path.join(ROOT, g), ignore_errors=True)
+    for t in cfg['textures']:
+        t.setdefault('contrast', cfg.get('contrast', 1.0))
     done = set()
     lang = {}
     for t in cfg['textures']:
@@ -346,6 +355,82 @@ def main():
         print(f'{name}: {gw}x{gh}, {n_blocks} Block-IDs, {n_models} Models')
 
 
+    cutout = []
+    for gs in cfg.get('glyphs', []):
+        font, margin = gs['font'], gs.get('margin', 0)
+        chars = ''.join(b['chars'] for b in gs['blocks'])
+        masks = {c: Image.open(os.path.join(ROOT, 'src', 'glyphs', font, f'{c}.png')).convert('L') for c in chars}
+        big = max(max(m.size) for m in masks.values())
+        sc = (TILE - 2 * margin) / big
+        hmax = round(max(m.size[1] for m in masks.values()) * sc)
+        bottom = (TILE + hmax) // 2
+        mat = next(x for x in cfg['textures'] if x['name'] == gs['material'])
+        mgw, mgh = mat['grid']
+        layers, _, _ = process(mat, (mgw * TILE, mgh * TILE))
+        def glyph_alpha(m, size):
+            k = (size - 2 * margin * size // TILE) / big
+            g = m.resize((max(1, round(m.size[0] * k)), max(1, round(m.size[1] * k))), Image.LANCZOS).point(lambda v: 255 if v >= 128 else 0)
+            hm = round(max(x.size[1] for x in masks.values()) * k)
+            a = Image.new('L', (size, size), 0)
+            a.paste(g, ((size - g.size[0]) // 2, (size + hm) // 2 - g.size[1]))
+            return a
+        for i, c in enumerate(chars):
+            alpha = glyph_alpha(masks[c], TILE)
+            tx, ty = (i * 7) % mgw, (i * 7 // mgw) % mgh
+            box = (tx * TILE, ty * TILE, (tx + 1) * TILE, (ty + 1) * TILE)
+            key = f'block/glyph/{font}/{c.lower()}'
+            for sfx, img in layers.items():
+                tile = img.crop(box).convert('RGBA')
+                if sfx == '':
+                    tile.putalpha(alpha)
+                tile.save(out(f'assets/{NS}/textures/{key}{sfx}.png'))
+            if gs.get('big', True):
+                ctm = f'assets/minecraft/optifine/ctm/{NS}/glyph/{font}/{c.lower()}'
+                big_a = glyph_alpha(masks[c], 2 * TILE)
+                bx, by = (tx // 2 * 2) % mgw, (ty // 2 * 2) % mgh
+                region = (bx * TILE, by * TILE, bx * TILE + 2 * TILE, by * TILE + 2 * TILE)
+                quads = {'tl': (0, 0), 'tr': (1, 0), 'bl': (0, 1), 'br': (1, 1)}
+                for sfx, img in layers.items():
+                    reg = img.crop(region).convert('RGBA')
+                    if sfx == '':
+                        reg.putalpha(big_a)
+                    for q, (qx, qy) in quads.items():
+                        reg.crop((qx * TILE, qy * TILE, (qx + 1) * TILE, (qy + 1) * TILE)).save(out(f'{ctm}/{q}{sfx}.png'))
+                    img.crop(box).convert('RGBA').save(out(f'{ctm}/n{sfx}.png')) if sfx else None
+                tile = layers[''].crop(box).convert('RGBA'); tile.putalpha(alpha); tile.save(out(f'{ctm}/n.png'))
+                names = ['n'] * 47
+                names[13], names[15], names[37], names[39] = 'tl', 'tr', 'bl', 'br'
+                with open(out(f'{ctm}/{c.lower()}.properties'), 'w', newline='\n') as f:
+                    f.write(f"method=ctm\ntiles={' '.join(names)}\nmatchTiles={NS}:textures/{key}\nconnect=state\n")
+            wjson(f'assets/{NS}/models/{key}.json', {'parent': 'block/block', 'textures': {'particle': f'{NS}:{key}', 'g': f'{NS}:{key}'},
+                  'elements': [{'from': [0, 0, 15.9], 'to': [16, 16, 15.9], 'faces': {'north': {'uv': [0, 0, 16, 16], 'texture': '#g'}}}]})
+        i = 0
+        for b in gs['blocks']:
+            ns, block = b['id'].split(':')
+            props = b.get('states', [['toggle', len(b['chars'])]])
+            combos = [{}]
+            for p, n in reversed(props):
+                combos = [dict(c, **{p: v}) for c in combos for v in range(1, n + 1)]
+            variants = {}
+            for c, combo in zip(b['chars'], combos):
+                for f, y in (('north', 0), ('east', 90), ('south', 180), ('west', 270)):
+                    k = ','.join(f'{p}={v}' for p, v in sorted(dict(combo, facing=f).items()))
+                    variants[k] = {'model': f'{NS}:block/glyph/{font}/{c.lower()}', 'y': y} if y else {'model': f'{NS}:block/glyph/{font}/{c.lower()}'}
+            wjson(f'assets/{ns}/blockstates/{block}.json', {'variants': variants})
+            cutout.append(b['id'])
+        print(f"glyphs {font}: {len(chars)} Zeichen, Skalierung {sc:.3f}")
+    if cutout:
+        base = a.raw('assets/minecraft/optifine/block.properties') or ''
+        lines = [l for l in base.splitlines() if l.strip() and not l.lstrip().startswith('#')]
+        found = False
+        for j, l in enumerate(lines):
+            if l.startswith('layer.cutout='):
+                lines[j] = (l + ' ' + ' '.join(cutout)).replace('= ', '=')
+                found = True
+        if not found:
+            lines.append('layer.cutout=' + ' '.join(cutout))
+        with open(out('assets/minecraft/optifine/block.properties'), 'w', newline='\n') as f:
+            f.write('\n'.join(lines) + '\n')
     for ns, entries in lang.items():
         wjson(f'assets/{ns}/lang/en_us.json', dict(sorted(entries.items())))
 

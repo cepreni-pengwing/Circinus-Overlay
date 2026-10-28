@@ -1,11 +1,12 @@
 {
+  "contrast": 1.33,
   "textures": [
     {
       "name": "mossy_sandstone",
       "display_name": "Green Metal Plating",
       "asset": "blue_metal_plate",
       "color": "#0c3f33",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "erosion": 0.12,
       "targets": ["conquest:mossy_sandstone"]
     },
@@ -14,7 +15,7 @@
       "display_name": "Dark Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0a1126",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "erosion": 0,
       "targets": ["conquest:irregular_sandstone_tiles"]
     },
@@ -23,7 +24,7 @@
       "display_name": "Light Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0278a4",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "erosion": 0,
       "targets": ["conquest:smooth_large_inscribed_sandstone_block"]
     },
@@ -32,18 +33,18 @@
       "display_name": "White Metal",
       "asset": "rusty_metal_04",
       "color": "#fffffd",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "erosion": 0.12,
       "targets": ["conquest:large_inscribed_sandstone_block"],
       "detail": 0.45,
-      "flatten": 48
+      "flatten": 24
     },
     {
       "name": "rusty_light_blue_metal",
       "display_name": "Rusty Light Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0278a4",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "rust": "full",
       "targets": ["conquest:smooth_large_sandstone_block"],
       "rust_asset": "rusty_metal_04"
@@ -53,7 +54,7 @@
       "display_name": "Rusty Dark Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0a1126",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "rust": "full",
       "targets": ["conquest:large_sandstone_block"],
       "rust_asset": "rusty_metal_04"
@@ -63,7 +64,7 @@
       "display_name": "Weathered Light Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0278a4",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "rust": "light",
       "targets": ["conquest:brown_sandstone_cobble"],
       "rust_asset": "rusty_metal_04"
@@ -73,10 +74,34 @@
       "display_name": "Weathered Dark Blue Metal",
       "asset": "rusty_metal_02",
       "color": "#0a1126",
-      "grid": [32, 32],
+      "grid": [16, 16],
       "rust": "light",
       "targets": ["conquest:mossy_lime_mortar_red_clay_brick"],
       "rust_asset": "rusty_metal_04"
+    }
+  ],
+  "glyphs": [
+    {
+      "font": "eurostile",
+      "material": "irregular_sandstone_tiles",
+      "blocks": [
+        {
+          "id": "conquest:large_cobblestone_roman_oven",
+          "chars": "ABCDEFGHIJKLMNOP",
+          "states": [
+            ["toggle", 8],
+            ["position", 2]
+          ]
+        },
+        {
+          "id": "conquest:wooden_bowls",
+          "chars": "QRSTUVWXYZ"
+        },
+        {
+          "id": "conquest:dark_wooden_bowls",
+          "chars": "0123456789"
+        }
+      ]
     }
   ]
 }

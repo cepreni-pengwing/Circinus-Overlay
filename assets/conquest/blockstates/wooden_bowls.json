@@ -1,0 +1,154 @@
+{
+  "variants": {
+    "facing=north,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/q"
+    },
+    "facing=east,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/q",
+      "y": 90
+    },
+    "facing=south,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/q",
+      "y": 180
+    },
+    "facing=west,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/q",
+      "y": 270
+    },
+    "facing=north,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/r"
+    },
+    "facing=east,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/r",
+      "y": 90
+    },
+    "facing=south,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/r",
+      "y": 180
+    },
+    "facing=west,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/r",
+      "y": 270
+    },
+    "facing=north,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/s"
+    },
+    "facing=east,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/s",
+      "y": 90
+    },
+    "facing=south,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/s",
+      "y": 180
+    },
+    "facing=west,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/s",
+      "y": 270
+    },
+    "facing=north,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/t"
+    },
+    "facing=east,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/t",
+      "y": 90
+    },
+    "facing=south,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/t",
+      "y": 180
+    },
+    "facing=west,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/t",
+      "y": 270
+    },
+    "facing=north,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/u"
+    },
+    "facing=east,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/u",
+      "y": 90
+    },
+    "facing=south,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/u",
+      "y": 180
+    },
+    "facing=west,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/u",
+      "y": 270
+    },
+    "facing=north,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/v"
+    },
+    "facing=east,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/v",
+      "y": 90
+    },
+    "facing=south,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/v",
+      "y": 180
+    },
+    "facing=west,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/v",
+      "y": 270
+    },
+    "facing=north,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/w"
+    },
+    "facing=east,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/w",
+      "y": 90
+    },
+    "facing=south,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/w",
+      "y": 180
+    },
+    "facing=west,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/w",
+      "y": 270
+    },
+    "facing=north,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/x"
+    },
+    "facing=east,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/x",
+      "y": 90
+    },
+    "facing=south,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/x",
+      "y": 180
+    },
+    "facing=west,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/x",
+      "y": 270
+    },
+    "facing=north,toggle=9": {
+      "model": "circinus:block/glyph/eurostile/y"
+    },
+    "facing=east,toggle=9": {
+      "model": "circinus:block/glyph/eurostile/y",
+      "y": 90
+    },
+    "facing=south,toggle=9": {
+      "model": "circinus:block/glyph/eurostile/y",
+      "y": 180
+    },
+    "facing=west,toggle=9": {
+      "model": "circinus:block/glyph/eurostile/y",
+      "y": 270
+    },
+    "facing=north,toggle=10": {
+      "model": "circinus:block/glyph/eurostile/z"
+    },
+    "facing=east,toggle=10": {
+      "model": "circinus:block/glyph/eurostile/z",
+      "y": 90
+    },
+    "facing=south,toggle=10": {
+      "model": "circinus:block/glyph/eurostile/z",
+      "y": 180
+    },
+    "facing=west,toggle=10": {
+      "model": "circinus:block/glyph/eurostile/z",
+      "y": 270
+    }
+  }
+}
