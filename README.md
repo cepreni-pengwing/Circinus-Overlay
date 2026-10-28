@@ -19,7 +19,7 @@ Load it above ACRP.
 
 ## Lettering
 
-Eurostile Extended Bold letters in Dark Blue Metal, placed in front of a facade (they snap to vertical slabs). Cycle the character with right-click (mallet); 2×2 identical letters merge into one large letter.
+Cycle the character with right-click (mallet); 2×2 identical letters merge into one large letter.
 
 | ID | Characters | Toggle |
 |---|---|---|
