@@ -1,0 +1,16 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "model": "circinus:models/block/rope/rope_2_1.obj",
+  "textures": {
+    "rope0": "circinus:block/rope_v0",
+    "rope1": "circinus:block/rope_v1",
+    "rope2": "circinus:block/rope_v2",
+    "rope3": "circinus:block/rope_v3",
+    "rope4": "circinus:block/rope_v4",
+    "rope5": "circinus:block/rope_v5",
+    "rope6": "circinus:block/rope_v6",
+    "rope7": "circinus:block/rope_v7",
+    "particle": "circinus:block/rope_v0"
+  }
+}

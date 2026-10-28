@@ -1,0 +1,8 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_balustrade",
+  "textures": {
+    "bottom": "circinus:block/corrugated_metal",
+    "side": "circinus:block/corrugated_metal",
+    "top": "circinus:block/corrugated_metal"
+  }
+}

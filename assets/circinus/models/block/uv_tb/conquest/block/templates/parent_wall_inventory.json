@@ -1,0 +1,10 @@
+{
+  "parent": "circinus:block/uv_tb/minecraft/block/wall_inventory",
+  "textures": {
+    "particle": "block/cobblestone",
+    "side": "block/cobblestone",
+    "wall": "#side",
+    "top": "#side",
+    "bottom": "#side"
+  }
+}

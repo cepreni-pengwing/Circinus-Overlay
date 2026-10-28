@@ -1,0 +1,203 @@
+{
+  "variants": {
+    "facing=north,size=1,position=1": {
+      "model": "circinus:block/rope/rope_1_1"
+    },
+    "facing=east,size=1,position=1": {
+      "model": "circinus:block/rope/rope_1_2"
+    },
+    "facing=south,size=1,position=1": {
+      "model": "circinus:block/rope/rope_1_3"
+    },
+    "facing=west,size=1,position=1": {
+      "model": "circinus:block/rope/rope_2_0"
+    },
+    "facing=north,size=1,position=2": {
+      "model": "circinus:block/rope/rope_2_1"
+    },
+    "facing=east,size=1,position=2": {
+      "model": "circinus:block/rope/rope_2_2"
+    },
+    "facing=south,size=1,position=2": {
+      "model": "circinus:block/rope/rope_1_0"
+    },
+    "facing=west,size=1,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small_45",
+      "y": 270
+    },
+    "facing=north,size=1,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "xoffset": 8
+    },
+    "facing=east,size=1,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 90,
+      "zoffset": 8
+    },
+    "facing=south,size=1,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 180,
+      "xoffset": -8
+    },
+    "facing=west,size=1,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 270,
+      "zoffset": -8
+    },
+    "facing=north,size=1,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "xoffset": -8
+    },
+    "facing=east,size=1,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 90,
+      "zoffset": -8
+    },
+    "facing=south,size=1,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 180,
+      "xoffset": 8
+    },
+    "facing=west,size=1,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_small",
+      "y": 270,
+      "zoffset": 8
+    },
+    "facing=north,size=2,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom"
+    },
+    "facing=east,size=2,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 90
+    },
+    "facing=south,size=2,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 180
+    },
+    "facing=west,size=2,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 270
+    },
+    "facing=north,size=2,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_45"
+    },
+    "facing=east,size=2,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_45",
+      "y": 90
+    },
+    "facing=south,size=2,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_45",
+      "y": 180
+    },
+    "facing=west,size=2,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_45",
+      "y": 270
+    },
+    "facing=north,size=2,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "xoffset": 8
+    },
+    "facing=east,size=2,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 90,
+      "zoffset": 8
+    },
+    "facing=south,size=2,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 180,
+      "xoffset": -8
+    },
+    "facing=west,size=2,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 270,
+      "zoffset": -8
+    },
+    "facing=north,size=2,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "xoffset": -8
+    },
+    "facing=east,size=2,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 90,
+      "zoffset": -8
+    },
+    "facing=south,size=2,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 180,
+      "xoffset": 8
+    },
+    "facing=west,size=2,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom",
+      "y": 270,
+      "zoffset": 8
+    },
+    "facing=north,size=3,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large"
+    },
+    "facing=east,size=3,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 90
+    },
+    "facing=south,size=3,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 180
+    },
+    "facing=west,size=3,position=1": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 270
+    },
+    "facing=north,size=3,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large_45"
+    },
+    "facing=east,size=3,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large_45",
+      "y": 90
+    },
+    "facing=south,size=3,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large_45",
+      "y": 180
+    },
+    "facing=west,size=3,position=2": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large_45",
+      "y": 270
+    },
+    "facing=north,size=3,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "xoffset": 14.5
+    },
+    "facing=east,size=3,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 90,
+      "zoffset": 14.5
+    },
+    "facing=south,size=3,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 180,
+      "xoffset": -14.5
+    },
+    "facing=west,size=3,position=3": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 270,
+      "zoffset": -14.5
+    },
+    "facing=north,size=3,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "xoffset": -14.5
+    },
+    "facing=east,size=3,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 90,
+      "zoffset": -14.5
+    },
+    "facing=south,size=3,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 180,
+      "xoffset": 14.5
+    },
+    "facing=west,size=3,position=4": {
+      "model": "conquest:block/looms/simple_warp_weighted_loom_large",
+      "y": 270,
+      "zoffset": 14.5
+    }
+  }
+}

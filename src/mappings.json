@@ -78,6 +78,40 @@
       "rust": "light",
       "targets": ["conquest:mossy_lime_mortar_red_clay_brick"],
       "rust_asset": "rusty_metal_04"
+    },
+    {
+      "name": "light_blue_metal_edge",
+      "display_name": "Light Blue Metal Edge",
+      "edge": {
+        "side": "smooth_large_inscribed_sandstone_block",
+        "top": "mossy_sandstone",
+        "bottom": "smooth_large_inscribed_sandstone_block"
+      },
+      "targets": ["conquest:lime_mortar_red_clay_brick"],
+      "edge_flip": ["stairs"]
+    },
+    {
+      "name": "light_gray_metal_grid",
+      "display_name": "Light Gray Metal Plating",
+      "asset": "rusty_metal_grid",
+      "color": "#b0b1ad",
+      "grid": [16, 16],
+      "erosion": 0.04,
+      "smoothness": 3.5,
+      "obj_size": 64,
+      "targets": ["conquest:mossy_red_clay_brick", "conquest:yellow_pipe"],
+      "names": {"conquest:yellow_pipe": "Light Gray Metal Wheel"}
+    },
+    {
+      "name": "corrugated_metal",
+      "display_name": "Corrugated Metal",
+      "asset": "corrugated_iron",
+      "grid": [8, 8],
+      "metalness": 0.45,
+      "blur": 0.5,
+      "height_shade": [0.14, 0.2],
+      "height_sharpen": 3,
+      "targets": ["conquest:red_clay_brick"]
     }
   ],
   "glyphs": [
@@ -102,6 +136,52 @@
           "chars": "0123456789"
         }
       ]
+    }
+  ],
+  "retexture": [
+    {
+      "blocks": ["conquest:yellow_pipe"],
+      "when": {"toggle": "2", "facing": ["north", "east"]},
+      "offset": [0, 0, -8],
+      "textures": {"cog": "light_gray_metal_grid_full", "beam": "light_gray_metal_grid_full", "beam_top": "light_gray_metal_grid_full"}
+    },
+    {
+      "blocks": [
+        "conquest:horizontal_metal_railings",
+        "conquest:horizontal_metal_railings_corner",
+        "conquest:diagonal_metal_railings"
+      ],
+      "when": {
+        "open": "false"
+      },
+      "upright": true,
+      "textures": {
+        "side": "large_inscribed_sandstone_block"
+      },
+      "y_offset": {
+        "conquest:horizontal_metal_railings_corner": 270
+      }
+    },
+    {
+      "blocks": ["conquest:metal_stairs"],
+      "when": {
+        "shape": "outer_left"
+      },
+      "model_from": {
+        "shape": "straight"
+      },
+      "textures": {
+        "side": "large_inscribed_sandstone_block",
+        "particle": "large_inscribed_sandstone_block",
+        "2": {
+          "material": "large_inscribed_sandstone_block",
+          "mask": "conquest:block/2_advanced_refined/2_metal/metal_stairs"
+        },
+        "cap": {
+          "material": "large_inscribed_sandstone_block",
+          "mask": "conquest:block/2_advanced_refined/2_metal/metal_grate"
+        }
+      }
     }
   ]
 }

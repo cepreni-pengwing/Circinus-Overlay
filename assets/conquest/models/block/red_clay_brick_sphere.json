@@ -1,0 +1,6 @@
+{
+  "parent": "circinus:block/uv/conquest/block/templates/parent_sphere",
+  "textures": {
+    "side": "circinus:block/corrugated_metal"
+  }
+}

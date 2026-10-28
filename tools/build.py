@@ -1,4 +1,4 @@
-import glob, json, os, random, re, shutil, sys, zipfile, zlib
+import glob, io, json, math, os, random, re, shutil, sys, zipfile, zlib
 from PIL import Image, ImageChops, ImageFilter, ImageMath, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +43,12 @@ class Assets:
         for z, n in zip(self.zips, self.names):
             if path in n:
                 return z.read(path).decode('utf-8', 'replace')
+        return None
+
+    def blob(self, path):
+        for z, n in zip(self.zips, self.names):
+            if path in n:
+                return z.read(path)
         return None
 
     def list(self, prefix):
@@ -112,9 +118,13 @@ def vanilla(pid):
     return {'parent': 'block/block', 'display': GUI, 'textures': tex, 'elements': [box(f, t, key) for f, t in VANILLA[pid]]}
 
 
-def unlock(elements):
+def unlock(elements, tb=False):
     out = json.loads(json.dumps(elements))
     for el in out:
+        if tb:
+            for dname, face in el.get('faces', {}).items():
+                if dname in ('up', 'down'):
+                    face['texture'] = '#top' if dname == 'up' else '#bottom'
         inside = all(0 <= c <= 16 for c in el.get('from', []) + el.get('to', []))
         if inside and el.get('rotation', {}).get('angle', 0) == 0:
             for face in el.get('faces', {}).values():
@@ -123,23 +133,23 @@ def unlock(elements):
     return out
 
 
-def fix_uv(a, d, done):
+def fix_uv(a, d, done, tb=False):
     if 'elements' in d:
-        d['elements'] = unlock(d['elements'])
+        d['elements'] = unlock(d['elements'], tb)
         return
     p = d.get('parent')
     if not p or p.startswith('builtin/'):
         return
     pid = p if ':' in p else 'minecraft:' + p
-    fixed = f"{NS}:block/uv/{pid.replace(':', '/')}"
-    if pid not in done:
+    fixed = f"{NS}:block/{'uv_tb' if tb else 'uv'}/{pid.replace(':', '/')}"
+    if (pid, tb) not in done:
         pd = a.json(model_path(pid)) or (vanilla(pid) if pid in VANILLA else None)
         if pd is None:
             return
         pd = json.loads(json.dumps(pd))
-        fix_uv(a, pd, done)
+        fix_uv(a, pd, done, tb)
         wjson(model_path(fixed), pd)
-        done.add(pid)
+        done.add((pid, tb))
     d['parent'] = fixed
 
 
@@ -218,6 +228,19 @@ def process(t, size):
     fit = lambda im: im if im.size == size else im.resize(size, Image.LANCZOS)
     rgb, arm, nrm = fit(src('diff').convert('RGB')), fit(src('arm').convert('RGB')), fit(src('nor_gl').convert('RGB'))
     F = lambda im: im.convert('F')
+    if 'color' not in t:
+        e = Image.new('L', size, 0)
+        if t.get('blur'):
+            rgb = rgb.filter(ImageFilter.GaussianBlur(t['blur']))
+        if t.get('height_shade'):
+            h = fit(src('disp').convert('I').point(lambda v: v * (1 / 257)).convert('L'))
+            hm, k, g = sum(h.getdata()) / (size[0] * size[1]), t['height_shade'], t.get('height_sharpen', 0)
+            sp = max(1, (pct(h, 0.95) - pct(h, 0.05)) / 2)
+            curve = (lambda v: math.tanh(g * (v - hm) / sp)) if g else (lambda v: (v - hm) / 128)
+            kd, kl = k if isinstance(k, list) else (k, k)
+            f = h.point(lambda v: max(0, min(255, round(128 * (1 - (kd if curve(v) > 0 else kl) * curve(v))))))
+            rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['f'] / 128, c=F(ch), f=F(f)).convert('L') for ch in rgb.split()])
+        return spec_layers(t, rgb.convert('RGBA'), arm, nrm), e, e
     y, py, d8, e, paint = analyse(rgb)
     noise = tile_noise(size, t.get('erosion_cells', 6), zlib.crc32(t['name'].encode()))
     thr = pct(noise, 1 - t.get('erosion', 0.12))
@@ -279,11 +302,15 @@ def process(t, size):
             l = (x * x + yy * yy + z * z) ** 0.5 or 1
             px += bytes(round((c / l + 1) * 127.5) for c in (x, yy, z))
         nrm = Image.frombytes('RGB', size, bytes(px))
+    return spec_layers(t, diffuse, arm, nrm), e, w
+
+
+def spec_layers(t, diffuse, arm, nrm):
     nrm.putalpha(255)
     _, rough, metal = arm.split()
-    sm = t.get('smoothness', 1.0)
-    spec = Image.merge('RGBA', (ImageOps.invert(rough).point(lambda v: round(v * sm)), metal, Image.new('L', size, 0), Image.new('L', size, 255)))
-    return {'': diffuse, '_n': nrm, '_s': spec}, e, w
+    sm, mt = t.get('smoothness', 1.0), t.get('metalness', 1.0)
+    spec = Image.merge('RGBA', (ImageOps.invert(rough).point(lambda v: round(v * sm)), metal.point(lambda v: round(v * mt)), Image.new('L', arm.size, 0), Image.new('L', arm.size, 255)))
+    return {'': diffuse, '_n': nrm, '_s': spec}
 
 
 def write_layers(layers, pick, name, gw, gh):
@@ -308,15 +335,19 @@ def main():
     a = Assets(sources(sys.argv))
     for g in GENERATED:
         shutil.rmtree(os.path.join(ROOT, g), ignore_errors=True)
+    if os.path.isdir(os.path.join(ROOT, 'src', 'assets')):
+        shutil.copytree(os.path.join(ROOT, 'src', 'assets'), os.path.join(ROOT, 'assets'), dirs_exist_ok=True)
     for t in cfg['textures']:
         t.setdefault('contrast', cfg.get('contrast', 1.0))
     done = set()
     lang = {}
     for t in cfg['textures']:
-        name, (gw, gh) = t['name'], t['grid']
+        name, (gw, gh) = t['name'], t.get('grid', (1, 1))
         tex_id = f'{NS}:block/{name}'
-        layers, e, w = process(t, (gw * TILE, gh * TILE))
-        write_layers(layers, w if t.get('rust') else ImageOps.invert(e), name, gw, gh)
+        edge = t.get('edge')
+        if not edge:
+            layers, e, w = process(t, (gw * TILE, gh * TILE))
+            write_layers(layers, w if t.get('rust') else ImageOps.invert(e), name, gw, gh)
         n_blocks = n_models = 0
         for fam in t['targets']:
             ns, block = fam.split(':')
@@ -344,17 +375,91 @@ def main():
                 for m in ms:
                     d = la.json(model_path(m))
                     if any(v in base for v in d.get('textures', {}).values()):
-                        d['textures'] = {kk: (tex_id if v in base else v) for kk, v in d['textures'].items()}
-                        fix_uv(la, d, done)
+                        if edge:
+                            ids = {k: f'{NS}:block/{v}' for k, v in edge.items()}
+                            top, bottom = ids['top'], ids['bottom']
+                            if any(bn.endswith('_' + x) for x in t.get('edge_flip', [])):
+                                top, bottom = bottom, top
+                            d['textures'] = {kk: ids['side'] for kk in d['textures']}
+                            d['textures'].update(top=top, bottom=bottom, particle=ids['side'])
+                            fix_uv(la, d, done, True)
+                        else:
+                            tid = tex_id
+                            if d.get('loader'):
+                                tid = f'{tex_id}_full'
+                                n = t.get('obj_size', gw * TILE)
+                                for sfx, img in layers.items():
+                                    img.resize((n, n), Image.LANCZOS).save(out(f'assets/{NS}/textures/block/{name}_full{sfx}.png'))
+                            d['textures'] = {kk: (tid if v in base else v) for kk, v in d['textures'].items()}
+                            fix_uv(la, d, done)
                         wjson(model_path(m), d)
                         n_models += 1
                 n_blocks += 1
                 if t.get('display_name'):
                     suffix = bn[len(block):].replace('_', ' ').title()
-                    lang.setdefault(ns, {})[f'block.{ns}.{bn}'] = t['display_name'] + suffix
+                    lang.setdefault(ns, {})[f'block.{ns}.{bn}'] = t.get('names', {}).get(f'{ns}:{bn}') or t['display_name'] + suffix
         print(f'{name}: {gw}x{gh}, {n_blocks} Block-IDs, {n_models} Models')
 
 
+    def tex_ref(v):
+        if isinstance(v, str):
+            return f'{NS}:block/{v}'
+        mns, mp = v['mask'].split(':')
+        key = f"block/masked/{v['material']}/{mp.rsplit('/', 1)[1]}"
+        mask = Image.open(io.BytesIO(a.blob(f'assets/{mns}/textures/{mp}.png'))).convert('RGBA').split()[3]
+        for sfx in ('', '_n', '_s'):
+            img = Image.open(out(f"assets/{NS}/textures/block/{v['material']}{sfx}.png")).convert('RGBA').resize(mask.size, Image.NEAREST)
+            if sfx == '':
+                img.putalpha(mask)
+            img.save(out(f'assets/{NS}/textures/{key}{sfx}.png'))
+        return f'{NS}:{key}'
+
+    for rt in cfg.get('retexture', []):
+        for bid in rt['blocks']:
+            ns, block = bid.split(':')
+            path = f'assets/{ns}/blockstates/{block}.json'
+            bs = a.json(path)
+            orig = a.json(path)['variants']
+            for k, var in bs.get('variants', {}).items():
+                props = dict(p.split('=') for p in k.split(',') if '=' in p)
+                if any(props.get(pk) not in (pv if isinstance(pv, list) else [pv]) for pk, pv in rt.get('when', {}).items()):
+                    continue
+                if rt.get('model_from'):
+                    want = dict(props, **rt['model_from'])
+                    src = next(v for kk, v in orig.items() if dict(p.split('=') for p in kk.split(',') if '=' in p) == want)
+                    var = json.loads(json.dumps(src))
+                    bs['variants'][k] = var
+                for x in (var if isinstance(var, list) else [var]):
+                    m = x['model']
+                    copy = f"{NS}:block/retex/{m.replace(':', '/')}"
+                    md = json.loads(json.dumps(a.json(model_path(m))))
+                    md['textures'] = {kk: (tex_ref(rt['textures'][kk]) if kk in rt['textures'] else vv) for kk, vv in md.get('textures', {}).items()}
+                    if rt.get('offset') and md.get('loader'):
+                        ons, op = md['model'].split(':')
+                        od = op.rsplit('/', 1)[0]
+                        obj = a.raw(f'assets/{ons}/{op}')
+                        lines = []
+                        for ln in obj.splitlines():
+                            if ln.startswith('v '):
+                                ln = 'v ' + ' '.join(f'{float(c) + o / 16:.6f}' for c, o in zip(ln.split()[1:4], rt['offset']))
+                            elif ln.startswith('mtllib '):
+                                mtl = ln.split(None, 1)[1]
+                                with open(out(f'assets/{NS}/models/retex/{ons}/{od}/{mtl}'), 'w', newline='\n') as f:
+                                    f.write(a.raw(f'assets/{ons}/{od}/{mtl}'))
+                            lines.append(ln)
+                        with open(out(f'assets/{NS}/models/retex/{ons}/{op}'), 'w', newline='\n') as f:
+                            f.write('\n'.join(lines) + '\n')
+                        md['model'] = f'{NS}:models/retex/{ons}/{op}'
+                    wjson(model_path(copy), md)
+                    x['model'] = copy
+                    if rt.get('upright'):
+                        x.pop('x', None)
+                        y = (x.get('y', 0) + rt.get('y_offset', {}).get(bid, 0)) % 360
+                        if y:
+                            x['y'] = y
+                        else:
+                            x.pop('y', None)
+            wjson(path, bs)
     cutout = []
     for gs in cfg.get('glyphs', []):
         font, margin = gs['font'], gs.get('margin', 0)

@@ -1,0 +1,6 @@
+{
+  "parent": "circinus:block/uv_tb/minecraft/block/arch_twometer_shape",
+  "textures": {
+    "side": "block/acacia_planks"
+  }
+}

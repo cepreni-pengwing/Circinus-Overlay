@@ -1,0 +1,9 @@
+{
+  "parent": "circinus:block/uv_tb/conquest/block/templates/parent_sphere",
+  "textures": {
+    "side": "circinus:block/smooth_large_inscribed_sandstone_block",
+    "top": "circinus:block/mossy_sandstone",
+    "bottom": "circinus:block/smooth_large_inscribed_sandstone_block",
+    "particle": "circinus:block/smooth_large_inscribed_sandstone_block"
+  }
+}
