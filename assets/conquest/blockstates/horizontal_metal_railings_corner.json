@@ -1,34 +1,34 @@
 {
   "variants": {
     "facing=north,open=false": {
-      "model": "circinus:block/retex/conquest/block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/5/conquest/block/horizontal_metal_railings_corner",
       "y": 180
     },
     "facing=south,open=false": {
-      "model": "circinus:block/retex/conquest/block/horizontal_metal_railings_corner"
+      "model": "circinus:block/retex/5/conquest/block/horizontal_metal_railings_corner"
     },
     "facing=east,open=false": {
-      "model": "circinus:block/retex/conquest/block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/5/conquest/block/horizontal_metal_railings_corner",
       "y": 270
     },
     "facing=west,open=false": {
-      "model": "circinus:block/retex/conquest/block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/5/conquest/block/horizontal_metal_railings_corner",
       "y": 90
     },
     "facing=north,open=true": {
-      "model": "conquest:block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/6/conquest/block/horizontal_metal_railings_corner",
       "y": 180
     },
     "facing=south,open=true": {
-      "model": "conquest:block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/6/conquest/block/horizontal_metal_railings_corner",
       "y": 0
     },
     "facing=east,open=true": {
-      "model": "conquest:block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/6/conquest/block/horizontal_metal_railings_corner",
       "y": 270
     },
     "facing=west,open=true": {
-      "model": "conquest:block/horizontal_metal_railings_corner",
+      "model": "circinus:block/retex/6/conquest/block/horizontal_metal_railings_corner",
       "y": 90
     }
   }

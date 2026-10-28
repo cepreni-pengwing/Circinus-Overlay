@@ -4,7 +4,7 @@ from PIL import Image, ImageChops, ImageFilter, ImageMath, ImageOps
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NS = 'circinus'
 TILE = 32
-GENERATED = [f'assets/{NS}', 'assets/conquest', 'assets/minecraft']
+GENERATED = [f'assets/{NS}', 'assets/conquest', 'assets/minecraft', 'assets/architects', 'labpbr']
 LIB = os.path.join(ROOT, 'lib')
 
 
@@ -58,7 +58,7 @@ class Assets:
 def sources(argv):
     jar = argv[1] if len(argv) > 1 else glob.glob(os.path.join(LIB, 'ConquestReforged*.jar'))[0]
     acrp = argv[2] if len(argv) > 2 else (glob.glob(os.path.join(LIB, 'ACRP*.zip')) or [None])[0]
-    return [p for p in (acrp, jar) if p]
+    return [p for p in (acrp, jar) if p] + glob.glob(os.path.join(LIB, 'Architects*.jar'))
 
 
 def models_in(o, acc):
@@ -341,6 +341,7 @@ def main():
         t.setdefault('contrast', cfg.get('contrast', 1.0))
     done = set()
     lang = {}
+    tab = []
     for t in cfg['textures']:
         name, (gw, gh) = t['name'], t.get('grid', (1, 1))
         tex_id = f'{NS}:block/{name}'
@@ -395,6 +396,7 @@ def main():
                         wjson(model_path(m), d)
                         n_models += 1
                 n_blocks += 1
+                tab.append(f'{ns}:{bn}')
                 if t.get('display_name'):
                     suffix = bn[len(block):].replace('_', ' ').title()
                     lang.setdefault(ns, {})[f'block.{ns}.{bn}'] = t.get('names', {}).get(f'{ns}:{bn}') or t['display_name'] + suffix
@@ -404,6 +406,17 @@ def main():
     def tex_ref(v):
         if isinstance(v, str):
             return f'{NS}:block/{v}'
+        if 'frame' in v:
+            key = f"block/frame/{v['material']}_{v['frame']}"
+            w = round(v['frame'] * TILE / 16)
+            mask = Image.new('L', (TILE, TILE), 255)
+            mask.paste(0, (w, w, TILE - w, TILE - w))
+            fill = {'': v.get('fill', (0, 0, 0, 0)), '_n': (128, 128, 255, 255), '_s': tuple(v.get('fill_spec', (0, 0))) + (0, 255)}
+            for sfx in ('', '_n', '_s'):
+                img = Image.open(out(f"assets/{NS}/textures/block/{v['material']}{sfx}.png")).convert('RGBA')
+                img = Image.composite(img, Image.new('RGBA', img.size, tuple(fill[sfx])), mask)
+                img.save(out(f'assets/{NS}/textures/{key}{sfx}.png'))
+            return f'{NS}:{key}'
         mns, mp = v['mask'].split(':')
         key = f"block/masked/{v['material']}/{mp.rsplit('/', 1)[1]}"
         mask = Image.open(io.BytesIO(a.blob(f'assets/{mns}/textures/{mp}.png'))).convert('RGBA').split()[3]
@@ -414,11 +427,23 @@ def main():
             img.save(out(f'assets/{NS}/textures/{key}{sfx}.png'))
         return f'{NS}:{key}'
 
-    for rt in cfg.get('retexture', []):
+    written = {}
+    cutout, translucent = [], []
+    for ri, rt in enumerate(cfg.get('retexture', [])):
+        cutout += rt['blocks'] if rt.get('cutout') else []
+        tab += rt['blocks']
+        if 'can_occlude' in rt:
+            for bid in rt['blocks']:
+                bns, bp = bid.split(':')
+                wjson(f'assets/{bns}/polytone/block_modifiers/{bp}.json', {'can_occlude': rt['can_occlude']})
+        for nid, nm in rt.get('names', {}).items():
+            lang.setdefault(nid.split(':')[0], {})[f"block.{nid.replace(':', '.')}"] = nm
+        translucent += rt['blocks'] if rt.get('translucent') else []
         for bid in rt['blocks']:
             ns, block = bid.split(':')
             path = f'assets/{ns}/blockstates/{block}.json'
-            bs = a.json(path)
+            bs = written.get(path) or a.json(path)
+            copies = {}
             orig = a.json(path)['variants']
             for k, var in bs.get('variants', {}).items():
                 props = dict(p.split('=') for p in k.split(',') if '=' in p)
@@ -431,7 +456,8 @@ def main():
                     bs['variants'][k] = var
                 for x in (var if isinstance(var, list) else [var]):
                     m = x['model']
-                    copy = f"{NS}:block/retex/{m.replace(':', '/')}"
+                    copy = f"{NS}:block/retex/{ri}/{m.replace(':', '/')}"
+                    copies[m] = copy
                     md = json.loads(json.dumps(a.json(model_path(m))))
                     md['textures'] = {kk: (tex_ref(rt['textures'][kk]) if kk in rt['textures'] else vv) for kk, vv in md.get('textures', {}).items()}
                     if rt.get('offset') and md.get('loader'):
@@ -450,6 +476,13 @@ def main():
                         with open(out(f'assets/{NS}/models/retex/{ons}/{op}'), 'w', newline='\n') as f:
                             f.write('\n'.join(lines) + '\n')
                         md['model'] = f'{NS}:models/retex/{ons}/{op}'
+                    if 'elements' in rt:
+                        md['elements'] = rt['elements']
+                    if rt.get('shade'):
+                        src_m = md
+                        while 'elements' not in src_m and src_m.get('parent'):
+                            src_m = a.json(model_path(src_m['parent']))
+                        md['elements'] = [{k: v for k, v in el.items() if k != 'shade'} for el in src_m.get('elements', [])]
                     wjson(model_path(copy), md)
                     x['model'] = copy
                     if rt.get('upright'):
@@ -460,7 +493,16 @@ def main():
                         else:
                             x.pop('y', None)
             wjson(path, bs)
-    cutout = []
+            written[path] = bs
+            item = a.json(f'assets/{ns}/models/item/{block}.json')
+            if rt.get('item') and item and item.get('parent'):
+                ip = item['parent']
+                if ip not in copies:
+                    copies[ip] = f"{NS}:block/retex/{ri}/{ip.replace(':', '/')}"
+                    md = json.loads(json.dumps(a.json(model_path(ip))))
+                    md['textures'] = {kk: (tex_ref(rt['textures'][kk]) if kk in rt['textures'] else vv) for kk, vv in md.get('textures', {}).items()}
+                    wjson(model_path(copies[ip]), md)
+                wjson(f'assets/{ns}/models/item/{block}.json', dict(item, parent=copies[ip]))
     for gs in cfg.get('glyphs', []):
         font, margin = gs['font'], gs.get('margin', 0)
         chars = ''.join(b['chars'] for b in gs['blocks'])
@@ -483,14 +525,14 @@ def main():
             alpha = glyph_alpha(masks[c], TILE)
             tx, ty = (i * 7) % mgw, (i * 7 // mgw) % mgh
             box = (tx * TILE, ty * TILE, (tx + 1) * TILE, (ty + 1) * TILE)
-            key = f'block/glyph/{font}/{c.lower()}'
+            key = f"block/glyph/{font}/{gs['material']}/{c.lower()}"
             for sfx, img in layers.items():
                 tile = img.crop(box).convert('RGBA')
                 if sfx == '':
                     tile.putalpha(alpha)
                 tile.save(out(f'assets/{NS}/textures/{key}{sfx}.png'))
             if gs.get('big', True):
-                ctm = f'assets/minecraft/optifine/ctm/{NS}/glyph/{font}/{c.lower()}'
+                ctm = f"assets/minecraft/optifine/ctm/{NS}/glyph/{font}/{gs['material']}/{c.lower()}"
                 big_a = glyph_alpha(masks[c], 2 * TILE)
                 bx, by = (tx // 2 * 2) % mgw, (ty // 2 * 2) % mgh
                 region = (bx * TILE, by * TILE, bx * TILE + 2 * TILE, by * TILE + 2 * TILE)
@@ -520,24 +562,50 @@ def main():
             for c, combo in zip(b['chars'], combos):
                 for f, y in (('north', 0), ('east', 90), ('south', 180), ('west', 270)):
                     k = ','.join(f'{p}={v}' for p, v in sorted(dict(combo, facing=f).items()))
-                    variants[k] = {'model': f'{NS}:block/glyph/{font}/{c.lower()}', 'y': y} if y else {'model': f'{NS}:block/glyph/{font}/{c.lower()}'}
+                    m = f"{NS}:block/glyph/{font}/{gs['material']}/{c.lower()}"
+                    variants[k] = {'model': m, 'y': y} if y else {'model': m}
             wjson(f'assets/{ns}/blockstates/{block}.json', {'variants': variants})
+            ch = b['chars']
+            wjson(f'assets/{ns}/models/item/{block}.json', {'parent': 'item/generated', 'textures': {'layer0': f"{NS}:block/glyph/{font}/{gs['material']}/{ch[0].lower()}"}})
+            lang.setdefault(ns, {})[f'block.{ns}.{block}'] = f"{mat['display_name']} {'Digits' if ch.isdigit() else 'Letters'} {ch[0]}–{ch[-1]}"
             cutout.append(b['id'])
+            tab.append(b['id'])
         print(f"glyphs {font}: {len(chars)} Zeichen, Skalierung {sc:.3f}")
-    if cutout:
+    if cutout or translucent:
         base = a.raw('assets/minecraft/optifine/block.properties') or ''
         lines = [l for l in base.splitlines() if l.strip() and not l.lstrip().startswith('#')]
-        found = False
-        for j, l in enumerate(lines):
-            if l.startswith('layer.cutout='):
-                lines[j] = (l + ' ' + ' '.join(cutout)).replace('= ', '=')
-                found = True
-        if not found:
-            lines.append('layer.cutout=' + ' '.join(cutout))
+        for layer, ids in (('cutout', cutout), ('translucent', translucent)):
+            if not ids:
+                continue
+            found = False
+            for j, l in enumerate(lines):
+                if l.startswith(f'layer.{layer}='):
+                    lines[j] = (l + ' ' + ' '.join(ids)).replace('= ', '=')
+                    found = True
+            if not found:
+                lines.append(f'layer.{layer}=' + ' '.join(ids))
         with open(out('assets/minecraft/optifine/block.properties'), 'w', newline='\n') as f:
             f.write('\n'.join(lines) + '\n')
+    for p in glob.glob(os.path.join(ROOT, 'src', 'assets', '*', 'blockstates', '*.json')):
+        tab.append(f"{p.split(os.sep)[-3]}:{os.path.basename(p)[:-5]}")
+    for nid, nm in cfg.get('names', {}).items():
+        lang.setdefault(nid.split(':')[0], {})[f"block.{nid.replace(':', '.')}"] = nm
+    if cfg.get('creative_tab'):
+        ct = cfg['creative_tab']
+        wjson(f'assets/{NS}/polytone/creative_tab_modifiers/{NS}.json', {'create_new': True, 'name': {'text': ct['name']}, 'icon': ct['icon'],
+              'additions': [{'items': list(dict.fromkeys(tab))}]})
     for ns, entries in lang.items():
         wjson(f'assets/{ns}/lang/en_us.json', dict(sorted(entries.items())))
+    for r, _, fs in os.walk(os.path.join(ROOT, 'assets')):
+        for f in fs:
+            if f.endswith(('_s.png', '_n.png')):
+                p = os.path.join(r, f)
+                R, G, B, A = Image.open(p).convert('RGBA').split()
+                if f.endswith('_s.png'):
+                    G = G.point(lambda m: 230 if m >= 230 else min(229, round(10 + 0.96 * m)))
+                else:
+                    B = Image.new('L', B.size, 255)
+                Image.merge('RGBA', (R, G, B, A)).save(out(os.path.join('labpbr', os.path.relpath(p, ROOT))))
 
 
 if __name__ == '__main__':

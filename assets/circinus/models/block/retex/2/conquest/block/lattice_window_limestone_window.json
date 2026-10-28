@@ -1,0 +1,6 @@
+{
+  "parent": "conquest:block/templates/parent_lattice_window",
+  "textures": {
+    "particle": "circinus:block/frame/large_inscribed_sandstone_block_0"
+  }
+}

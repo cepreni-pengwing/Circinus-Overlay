@@ -1,0 +1,52 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "bottom": "circinus:block/masked/large_inscribed_sandstone_block/metal_grate",
+    "top": "circinus:block/masked/large_inscribed_sandstone_block/metal_grate",
+    "north": "conquest:block/4_furniture/3_wood/map_table",
+    "east": "conquest:block/4_furniture/3_wood/map_table",
+    "west": "conquest:block/4_furniture/3_wood/map_table",
+    "south": "conquest:block/4_furniture/3_wood/map_table",
+    "particle": "circinus:block/large_inscribed_sandstone_block"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#north",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#south",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#west",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#east",
+          "cullface": "east"
+        }
+      }
+    }
+  ]
+}

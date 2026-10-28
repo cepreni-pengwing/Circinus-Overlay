@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "toggle=1,facing=north": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "zoffset": 12
+    },
+    "toggle=1,facing=east": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "xoffset": -12,
+      "y": 90
+    },
+    "toggle=1,facing=south": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "zoffset": -12,
+      "y": 180
+    },
+    "toggle=1,facing=west": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "xoffset": 12,
+      "y": 270
+    },
+    "toggle=2,facing=north": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "zoffset": 20
+    },
+    "toggle=2,facing=east": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "xoffset": -20,
+      "y": 90
+    },
+    "toggle=2,facing=south": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "zoffset": -20,
+      "y": 180
+    },
+    "toggle=2,facing=west": {
+      "model": "circinus:block/retex/2/conquest/block/lattice_window_limestone_window",
+      "xoffset": 20,
+      "y": 270
+    }
+  }
+}

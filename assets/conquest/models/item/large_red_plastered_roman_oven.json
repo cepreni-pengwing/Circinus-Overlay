@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "circinus:block/glyph/eurostile/red_metal/a"
+  }
+}

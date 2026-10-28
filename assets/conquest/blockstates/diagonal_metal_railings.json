@@ -1,34 +1,34 @@
 {
   "variants": {
     "facing=north,half=bottom,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_bl",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_bl",
       "y": 270
     },
     "facing=south,half=bottom,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_bl",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_bl",
       "y": 90
     },
     "facing=east,half=bottom,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_bl"
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_bl"
     },
     "facing=west,half=bottom,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_bl",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_bl",
       "y": 180
     },
     "facing=north,half=top,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_ur",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_ur",
       "y": 90
     },
     "facing=south,half=top,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_ur",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_ur",
       "y": 270
     },
     "facing=east,half=top,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_ur",
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_ur",
       "y": 180
     },
     "facing=west,half=top,open=false": {
-      "model": "circinus:block/retex/conquest/block/diagonal_metal_railings_ur"
+      "model": "circinus:block/retex/4/conquest/block/diagonal_metal_railings_ur"
     },
     "facing=north,half=bottom,open=true": {
       "model": "conquest:block/diagonal_metal_railings_bl",

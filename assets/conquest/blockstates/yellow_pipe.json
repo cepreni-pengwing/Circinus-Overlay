@@ -22,12 +22,12 @@
       "x": 90
     },
     "toggle=2,facing=north": {
-      "model": "circinus:block/retex/conquest/block/cage-lantern_gear",
+      "model": "circinus:block/retex/3/conquest/block/cage-lantern_gear",
       "x": 90,
       "y": 90
     },
     "toggle=2,facing=east": {
-      "model": "circinus:block/retex/conquest/block/cage-lantern_gear",
+      "model": "circinus:block/retex/3/conquest/block/cage-lantern_gear",
       "x": 90
     }
   }

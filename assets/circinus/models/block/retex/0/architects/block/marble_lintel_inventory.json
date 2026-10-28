@@ -1,0 +1,7 @@
+{
+  "parent": "architects:block/stone_lintel_inventory",
+  "textures": {
+    "side": "circinus:block/large_inscribed_sandstone_block",
+    "top": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

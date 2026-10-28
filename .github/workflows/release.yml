@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: zip -r "Circinus-Overlay-$GITHUB_REF_NAME.zip" pack.mcmeta pack.png assets
-      - run: gh release create "$GITHUB_REF_NAME" "Circinus-Overlay-$GITHUB_REF_NAME.zip"
+      - run: cp -r labpbr/assets . && zip -r "Circinus-Overlay-$GITHUB_REF_NAME-LabPBR.zip" pack.mcmeta pack.png assets
+      - run: gh release create "$GITHUB_REF_NAME" "Circinus-Overlay-$GITHUB_REF_NAME.zip" "Circinus-Overlay-$GITHUB_REF_NAME-LabPBR.zip"
         env:
           GH_TOKEN: ${{ github.token }}

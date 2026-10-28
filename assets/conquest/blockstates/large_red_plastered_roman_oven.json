@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "facing=north,position=1,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/a"
+    },
+    "facing=east,position=1,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/a",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/a",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/a",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/b"
+    },
+    "facing=east,position=1,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/b",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/b",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/b",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/c"
+    },
+    "facing=east,position=1,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/c",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/c",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/c",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/d"
+    },
+    "facing=east,position=1,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/d",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/d",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/d",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/e"
+    },
+    "facing=east,position=1,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/e",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/e",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/e",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/f"
+    },
+    "facing=east,position=1,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/f",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/f",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/f",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/g"
+    },
+    "facing=east,position=1,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/g",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/g",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/g",
+      "y": 270
+    },
+    "facing=north,position=1,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/h"
+    },
+    "facing=east,position=1,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/h",
+      "y": 90
+    },
+    "facing=south,position=1,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/h",
+      "y": 180
+    },
+    "facing=west,position=1,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/h",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/i"
+    },
+    "facing=east,position=2,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/i",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/i",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=1": {
+      "model": "circinus:block/glyph/eurostile/red_metal/i",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/j"
+    },
+    "facing=east,position=2,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/j",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/j",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=2": {
+      "model": "circinus:block/glyph/eurostile/red_metal/j",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/k"
+    },
+    "facing=east,position=2,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/k",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/k",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=3": {
+      "model": "circinus:block/glyph/eurostile/red_metal/k",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/l"
+    },
+    "facing=east,position=2,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/l",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/l",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=4": {
+      "model": "circinus:block/glyph/eurostile/red_metal/l",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/m"
+    },
+    "facing=east,position=2,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/m",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/m",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=5": {
+      "model": "circinus:block/glyph/eurostile/red_metal/m",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/n"
+    },
+    "facing=east,position=2,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/n",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/n",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=6": {
+      "model": "circinus:block/glyph/eurostile/red_metal/n",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/o"
+    },
+    "facing=east,position=2,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/o",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/o",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=7": {
+      "model": "circinus:block/glyph/eurostile/red_metal/o",
+      "y": 270
+    },
+    "facing=north,position=2,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/p"
+    },
+    "facing=east,position=2,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/p",
+      "y": 90
+    },
+    "facing=south,position=2,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/p",
+      "y": 180
+    },
+    "facing=west,position=2,toggle=8": {
+      "model": "circinus:block/glyph/eurostile/red_metal/p",
+      "y": 270
+    }
+  }
+}

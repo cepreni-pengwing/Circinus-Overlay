@@ -1,0 +1,9 @@
+{
+  "parent": "circinus:block/uv_tb/conquest/block/templates/parent_stairs_outer",
+  "textures": {
+    "side": "circinus:block/large_inscribed_sandstone_block",
+    "top": "circinus:block/large_inscribed_sandstone_block",
+    "bottom": "circinus:block/mossy_sandstone",
+    "particle": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

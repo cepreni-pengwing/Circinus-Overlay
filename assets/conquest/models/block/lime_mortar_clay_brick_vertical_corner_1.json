@@ -1,0 +1,9 @@
+{
+  "parent": "circinus:block/uv_tb/conquest/block/templates/parent_vertical_corner_1",
+  "textures": {
+    "side": "circinus:block/large_inscribed_sandstone_block",
+    "top": "circinus:block/mossy_sandstone",
+    "bottom": "circinus:block/large_inscribed_sandstone_block",
+    "particle": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

@@ -1,153 +1,153 @@
 {
   "variants": {
     "facing=north,toggle=1": {
-      "model": "circinus:block/glyph/eurostile/q"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/q"
     },
     "facing=east,toggle=1": {
-      "model": "circinus:block/glyph/eurostile/q",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/q",
       "y": 90
     },
     "facing=south,toggle=1": {
-      "model": "circinus:block/glyph/eurostile/q",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/q",
       "y": 180
     },
     "facing=west,toggle=1": {
-      "model": "circinus:block/glyph/eurostile/q",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/q",
       "y": 270
     },
     "facing=north,toggle=2": {
-      "model": "circinus:block/glyph/eurostile/r"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/r"
     },
     "facing=east,toggle=2": {
-      "model": "circinus:block/glyph/eurostile/r",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/r",
       "y": 90
     },
     "facing=south,toggle=2": {
-      "model": "circinus:block/glyph/eurostile/r",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/r",
       "y": 180
     },
     "facing=west,toggle=2": {
-      "model": "circinus:block/glyph/eurostile/r",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/r",
       "y": 270
     },
     "facing=north,toggle=3": {
-      "model": "circinus:block/glyph/eurostile/s"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/s"
     },
     "facing=east,toggle=3": {
-      "model": "circinus:block/glyph/eurostile/s",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/s",
       "y": 90
     },
     "facing=south,toggle=3": {
-      "model": "circinus:block/glyph/eurostile/s",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/s",
       "y": 180
     },
     "facing=west,toggle=3": {
-      "model": "circinus:block/glyph/eurostile/s",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/s",
       "y": 270
     },
     "facing=north,toggle=4": {
-      "model": "circinus:block/glyph/eurostile/t"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/t"
     },
     "facing=east,toggle=4": {
-      "model": "circinus:block/glyph/eurostile/t",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/t",
       "y": 90
     },
     "facing=south,toggle=4": {
-      "model": "circinus:block/glyph/eurostile/t",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/t",
       "y": 180
     },
     "facing=west,toggle=4": {
-      "model": "circinus:block/glyph/eurostile/t",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/t",
       "y": 270
     },
     "facing=north,toggle=5": {
-      "model": "circinus:block/glyph/eurostile/u"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/u"
     },
     "facing=east,toggle=5": {
-      "model": "circinus:block/glyph/eurostile/u",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/u",
       "y": 90
     },
     "facing=south,toggle=5": {
-      "model": "circinus:block/glyph/eurostile/u",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/u",
       "y": 180
     },
     "facing=west,toggle=5": {
-      "model": "circinus:block/glyph/eurostile/u",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/u",
       "y": 270
     },
     "facing=north,toggle=6": {
-      "model": "circinus:block/glyph/eurostile/v"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/v"
     },
     "facing=east,toggle=6": {
-      "model": "circinus:block/glyph/eurostile/v",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/v",
       "y": 90
     },
     "facing=south,toggle=6": {
-      "model": "circinus:block/glyph/eurostile/v",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/v",
       "y": 180
     },
     "facing=west,toggle=6": {
-      "model": "circinus:block/glyph/eurostile/v",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/v",
       "y": 270
     },
     "facing=north,toggle=7": {
-      "model": "circinus:block/glyph/eurostile/w"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/w"
     },
     "facing=east,toggle=7": {
-      "model": "circinus:block/glyph/eurostile/w",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/w",
       "y": 90
     },
     "facing=south,toggle=7": {
-      "model": "circinus:block/glyph/eurostile/w",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/w",
       "y": 180
     },
     "facing=west,toggle=7": {
-      "model": "circinus:block/glyph/eurostile/w",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/w",
       "y": 270
     },
     "facing=north,toggle=8": {
-      "model": "circinus:block/glyph/eurostile/x"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/x"
     },
     "facing=east,toggle=8": {
-      "model": "circinus:block/glyph/eurostile/x",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/x",
       "y": 90
     },
     "facing=south,toggle=8": {
-      "model": "circinus:block/glyph/eurostile/x",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/x",
       "y": 180
     },
     "facing=west,toggle=8": {
-      "model": "circinus:block/glyph/eurostile/x",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/x",
       "y": 270
     },
     "facing=north,toggle=9": {
-      "model": "circinus:block/glyph/eurostile/y"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/y"
     },
     "facing=east,toggle=9": {
-      "model": "circinus:block/glyph/eurostile/y",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/y",
       "y": 90
     },
     "facing=south,toggle=9": {
-      "model": "circinus:block/glyph/eurostile/y",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/y",
       "y": 180
     },
     "facing=west,toggle=9": {
-      "model": "circinus:block/glyph/eurostile/y",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/y",
       "y": 270
     },
     "facing=north,toggle=10": {
-      "model": "circinus:block/glyph/eurostile/z"
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/z"
     },
     "facing=east,toggle=10": {
-      "model": "circinus:block/glyph/eurostile/z",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/z",
       "y": 90
     },
     "facing=south,toggle=10": {
-      "model": "circinus:block/glyph/eurostile/z",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/z",
       "y": 180
     },
     "facing=west,toggle=10": {
-      "model": "circinus:block/glyph/eurostile/z",
+      "model": "circinus:block/glyph/eurostile/irregular_sandstone_tiles/z",
       "y": 270
     }
   }
