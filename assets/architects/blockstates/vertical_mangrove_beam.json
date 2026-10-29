@@ -1,0 +1,304 @@
+{
+  "variants": {
+    "extension=1,facing=east,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension1",
+      "y": 90
+    },
+    "extension=1,facing=east,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension1",
+      "y": 90
+    },
+    "extension=1,facing=east,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension1",
+      "y": 90
+    },
+    "extension=1,facing=east,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension1",
+      "y": 90
+    },
+    "extension=1,facing=east,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension1",
+      "y": 90
+    },
+    "extension=1,facing=north,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension1"
+    },
+    "extension=1,facing=north,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension1"
+    },
+    "extension=1,facing=north,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension1"
+    },
+    "extension=1,facing=north,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension1"
+    },
+    "extension=1,facing=north,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension1"
+    },
+    "extension=1,facing=south,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension1",
+      "y": 180
+    },
+    "extension=1,facing=south,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension1",
+      "y": 180
+    },
+    "extension=1,facing=south,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension1",
+      "y": 180
+    },
+    "extension=1,facing=south,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension1",
+      "y": 180
+    },
+    "extension=1,facing=south,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension1",
+      "y": 180
+    },
+    "extension=1,facing=west,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension1",
+      "y": 270
+    },
+    "extension=1,facing=west,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension1",
+      "y": 270
+    },
+    "extension=1,facing=west,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension1",
+      "y": 270
+    },
+    "extension=1,facing=west,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension1",
+      "y": 270
+    },
+    "extension=1,facing=west,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension1",
+      "y": 270
+    },
+    "extension=2,facing=east,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension2",
+      "y": 90
+    },
+    "extension=2,facing=east,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension2",
+      "y": 90
+    },
+    "extension=2,facing=east,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension2",
+      "y": 90
+    },
+    "extension=2,facing=east,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension2",
+      "y": 90
+    },
+    "extension=2,facing=east,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension2",
+      "y": 90
+    },
+    "extension=2,facing=north,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension2"
+    },
+    "extension=2,facing=north,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension2"
+    },
+    "extension=2,facing=north,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension2"
+    },
+    "extension=2,facing=north,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension2"
+    },
+    "extension=2,facing=north,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension2"
+    },
+    "extension=2,facing=south,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension2",
+      "y": 180
+    },
+    "extension=2,facing=south,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension2",
+      "y": 180
+    },
+    "extension=2,facing=south,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension2",
+      "y": 180
+    },
+    "extension=2,facing=south,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension2",
+      "y": 180
+    },
+    "extension=2,facing=south,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension2",
+      "y": 180
+    },
+    "extension=2,facing=west,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension2",
+      "y": 270
+    },
+    "extension=2,facing=west,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension2",
+      "y": 270
+    },
+    "extension=2,facing=west,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension2",
+      "y": 270
+    },
+    "extension=2,facing=west,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension2",
+      "y": 270
+    },
+    "extension=2,facing=west,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension2",
+      "y": 270
+    },
+    "extension=3,facing=east,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension3",
+      "y": 90
+    },
+    "extension=3,facing=east,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension3",
+      "y": 90
+    },
+    "extension=3,facing=east,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension3",
+      "y": 90
+    },
+    "extension=3,facing=east,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension3",
+      "y": 90
+    },
+    "extension=3,facing=east,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension3",
+      "y": 90
+    },
+    "extension=3,facing=north,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension3"
+    },
+    "extension=3,facing=north,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension3"
+    },
+    "extension=3,facing=north,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension3"
+    },
+    "extension=3,facing=north,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension3"
+    },
+    "extension=3,facing=north,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension3"
+    },
+    "extension=3,facing=south,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension3",
+      "y": 180
+    },
+    "extension=3,facing=south,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension3",
+      "y": 180
+    },
+    "extension=3,facing=south,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension3",
+      "y": 180
+    },
+    "extension=3,facing=south,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension3",
+      "y": 180
+    },
+    "extension=3,facing=south,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension3",
+      "y": 180
+    },
+    "extension=3,facing=west,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension3",
+      "y": 270
+    },
+    "extension=3,facing=west,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension3",
+      "y": 270
+    },
+    "extension=3,facing=west,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension3",
+      "y": 270
+    },
+    "extension=3,facing=west,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension3",
+      "y": 270
+    },
+    "extension=3,facing=west,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension3",
+      "y": 270
+    },
+    "extension=4,facing=east,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension4",
+      "y": 90
+    },
+    "extension=4,facing=east,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension4",
+      "y": 90
+    },
+    "extension=4,facing=east,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension4",
+      "y": 90
+    },
+    "extension=4,facing=east,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension4",
+      "y": 90
+    },
+    "extension=4,facing=east,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension4",
+      "y": 90
+    },
+    "extension=4,facing=north,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension4"
+    },
+    "extension=4,facing=north,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension4"
+    },
+    "extension=4,facing=north,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension4"
+    },
+    "extension=4,facing=north,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension4"
+    },
+    "extension=4,facing=north,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension4"
+    },
+    "extension=4,facing=south,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension4",
+      "y": 180
+    },
+    "extension=4,facing=south,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension4",
+      "y": 180
+    },
+    "extension=4,facing=south,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension4",
+      "y": 180
+    },
+    "extension=4,facing=south,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension4",
+      "y": 180
+    },
+    "extension=4,facing=south,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension4",
+      "y": 180
+    },
+    "extension=4,facing=west,variant=1": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam1_extension4",
+      "y": 270
+    },
+    "extension=4,facing=west,variant=2": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam2_extension4",
+      "y": 270
+    },
+    "extension=4,facing=west,variant=3": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam3_extension4",
+      "y": 270
+    },
+    "extension=4,facing=west,variant=4": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam4_extension4",
+      "y": 270
+    },
+    "extension=4,facing=west,variant=5": {
+      "model": "circinus:block/retex/49/architects/block/vertical_mangrove_beam5_extension4",
+      "y": 270
+    }
+  }
+}

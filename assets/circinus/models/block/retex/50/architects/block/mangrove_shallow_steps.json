@@ -1,0 +1,12 @@
+{
+  "loader": "porting_lib:obj",
+  "parent": "minecraft:block/block",
+  "model": "architects:models/obj/shallow_steps_type2.obj",
+  "emissive_ambient": true,
+  "flip_v": true,
+  "textures": {
+    "particle": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain",
+    "top": "circinus:block/white_metal_obj_plain"
+  }
+}

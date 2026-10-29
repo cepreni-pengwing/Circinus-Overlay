@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "extension=1,facing=east,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left1",
+      "y": 90
+    },
+    "extension=1,facing=east,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right1",
+      "y": 90
+    },
+    "extension=1,facing=north,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left1"
+    },
+    "extension=1,facing=north,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right1"
+    },
+    "extension=1,facing=south,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left1",
+      "y": 180
+    },
+    "extension=1,facing=south,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right1",
+      "y": 180
+    },
+    "extension=1,facing=west,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left1",
+      "y": 270
+    },
+    "extension=1,facing=west,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right1",
+      "y": 270
+    },
+    "extension=2,facing=east,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left2",
+      "y": 90
+    },
+    "extension=2,facing=east,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right2",
+      "y": 90
+    },
+    "extension=2,facing=north,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left2"
+    },
+    "extension=2,facing=north,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right2"
+    },
+    "extension=2,facing=south,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left2",
+      "y": 180
+    },
+    "extension=2,facing=south,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right2",
+      "y": 180
+    },
+    "extension=2,facing=west,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left2",
+      "y": 270
+    },
+    "extension=2,facing=west,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right2",
+      "y": 270
+    },
+    "extension=3,facing=east,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left3",
+      "y": 90
+    },
+    "extension=3,facing=east,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right3",
+      "y": 90
+    },
+    "extension=3,facing=north,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left3"
+    },
+    "extension=3,facing=north,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right3"
+    },
+    "extension=3,facing=south,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left3",
+      "y": 180
+    },
+    "extension=3,facing=south,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right3",
+      "y": 180
+    },
+    "extension=3,facing=west,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left3",
+      "y": 270
+    },
+    "extension=3,facing=west,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right3",
+      "y": 270
+    },
+    "extension=4,facing=east,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left4",
+      "y": 90
+    },
+    "extension=4,facing=east,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right4",
+      "y": 90
+    },
+    "extension=4,facing=north,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left4"
+    },
+    "extension=4,facing=north,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right4"
+    },
+    "extension=4,facing=south,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left4",
+      "y": 180
+    },
+    "extension=4,facing=south,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right4",
+      "y": 180
+    },
+    "extension=4,facing=west,hinge=left": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_left4",
+      "y": 270
+    },
+    "extension=4,facing=west,hinge=right": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_side_beam_right4",
+      "y": 270
+    }
+  }
+}

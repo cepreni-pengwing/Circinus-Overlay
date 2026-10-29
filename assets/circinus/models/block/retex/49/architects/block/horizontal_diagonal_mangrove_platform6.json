@@ -1,0 +1,6 @@
+{
+  "parent": "architects:template/template_horizontal_diagonal_platform6",
+  "textures": {
+    "all": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "variants": {
+    "extension=1,rotation=0,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front1",
+      "y": 0
+    },
+    "extension=1,rotation=0,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back1",
+      "y": 0
+    },
+    "extension=1,rotation=1,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner1",
+      "y": 90
+    },
+    "extension=1,rotation=1,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner1",
+      "y": 90
+    },
+    "extension=1,rotation=2,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front1",
+      "y": 90
+    },
+    "extension=1,rotation=2,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back1",
+      "y": 90
+    },
+    "extension=1,rotation=3,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner1",
+      "y": 180
+    },
+    "extension=1,rotation=3,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner1",
+      "y": 180
+    },
+    "extension=1,rotation=4,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front1",
+      "y": 180
+    },
+    "extension=1,rotation=4,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back1",
+      "y": 180
+    },
+    "extension=1,rotation=5,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner1",
+      "y": 270
+    },
+    "extension=1,rotation=5,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner1",
+      "y": 270
+    },
+    "extension=1,rotation=6,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front1",
+      "y": 270
+    },
+    "extension=1,rotation=6,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back1",
+      "y": 270
+    },
+    "extension=1,rotation=7,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner1",
+      "y": 0
+    },
+    "extension=1,rotation=7,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner1",
+      "y": 0
+    },
+    "extension=2,rotation=0,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front2",
+      "y": 0
+    },
+    "extension=2,rotation=0,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back2",
+      "y": 0
+    },
+    "extension=2,rotation=1,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner2",
+      "y": 90
+    },
+    "extension=2,rotation=1,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner2",
+      "y": 90
+    },
+    "extension=2,rotation=2,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front2",
+      "y": 90
+    },
+    "extension=2,rotation=2,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back2",
+      "y": 90
+    },
+    "extension=2,rotation=3,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner2",
+      "y": 180
+    },
+    "extension=2,rotation=3,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner2",
+      "y": 180
+    },
+    "extension=2,rotation=4,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front2",
+      "y": 180
+    },
+    "extension=2,rotation=4,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back2",
+      "y": 180
+    },
+    "extension=2,rotation=5,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner2",
+      "y": 270
+    },
+    "extension=2,rotation=5,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner2",
+      "y": 270
+    },
+    "extension=2,rotation=6,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front2",
+      "y": 270
+    },
+    "extension=2,rotation=6,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back2",
+      "y": 270
+    },
+    "extension=2,rotation=7,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner2",
+      "y": 0
+    },
+    "extension=2,rotation=7,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner2",
+      "y": 0
+    },
+    "extension=3,rotation=0,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front3",
+      "y": 0
+    },
+    "extension=3,rotation=0,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back3",
+      "y": 0
+    },
+    "extension=3,rotation=1,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner3",
+      "y": 90
+    },
+    "extension=3,rotation=1,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner3",
+      "y": 90
+    },
+    "extension=3,rotation=2,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front3",
+      "y": 90
+    },
+    "extension=3,rotation=2,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back3",
+      "y": 90
+    },
+    "extension=3,rotation=3,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner3",
+      "y": 180
+    },
+    "extension=3,rotation=3,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner3",
+      "y": 180
+    },
+    "extension=3,rotation=4,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front3",
+      "y": 180
+    },
+    "extension=3,rotation=4,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back3",
+      "y": 180
+    },
+    "extension=3,rotation=5,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner3",
+      "y": 270
+    },
+    "extension=3,rotation=5,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner3",
+      "y": 270
+    },
+    "extension=3,rotation=6,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front3",
+      "y": 270
+    },
+    "extension=3,rotation=6,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back3",
+      "y": 270
+    },
+    "extension=3,rotation=7,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner3",
+      "y": 0
+    },
+    "extension=3,rotation=7,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner3",
+      "y": 0
+    },
+    "extension=4,rotation=0,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front4",
+      "y": 0
+    },
+    "extension=4,rotation=0,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back4",
+      "y": 0
+    },
+    "extension=4,rotation=1,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner4",
+      "y": 90
+    },
+    "extension=4,rotation=1,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner4",
+      "y": 90
+    },
+    "extension=4,rotation=2,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front4",
+      "y": 90
+    },
+    "extension=4,rotation=2,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back4",
+      "y": 90
+    },
+    "extension=4,rotation=3,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner4",
+      "y": 180
+    },
+    "extension=4,rotation=3,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner4",
+      "y": 180
+    },
+    "extension=4,rotation=4,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front4",
+      "y": 180
+    },
+    "extension=4,rotation=4,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back4",
+      "y": 180
+    },
+    "extension=4,rotation=5,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner4",
+      "y": 270
+    },
+    "extension=4,rotation=5,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner4",
+      "y": 270
+    },
+    "extension=4,rotation=6,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front4",
+      "y": 270
+    },
+    "extension=4,rotation=6,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back4",
+      "y": 270
+    },
+    "extension=4,rotation=7,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_front_corner4",
+      "y": 0
+    },
+    "extension=4,rotation=7,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_beam_back_corner4",
+      "y": 0
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "conquest:block/ladder",
+  "textures": {
+    "down": "conquest:block/2_advanced_refined/7_wood/1_painted/yellow_painted_planks",
+    "particle": "conquest:block/2_advanced_refined/7_wood/1_painted/yellow_painted_planks"
+  }
+}

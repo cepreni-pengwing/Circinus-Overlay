@@ -1,0 +1,58 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_1",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_2",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_3",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column"
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_1"
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_2"
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_3"
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_1",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_2",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/39/conquest/block/sandstone_column_3",
+        "x": 90
+      }
+    ]
+  }
+}

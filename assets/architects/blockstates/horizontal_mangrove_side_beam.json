@@ -1,0 +1,216 @@
+{
+  "variants": {
+    "extension=1,facing=east,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "y": 90
+    },
+    "extension=1,facing=east,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 6.0,
+      "y": 90
+    },
+    "extension=1,facing=east,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 12.0,
+      "y": 90
+    },
+    "extension=1,facing=north,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1"
+    },
+    "extension=1,facing=north,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 6.0
+    },
+    "extension=1,facing=north,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 12.0
+    },
+    "extension=1,facing=south,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "y": 180
+    },
+    "extension=1,facing=south,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 6.0,
+      "y": 180
+    },
+    "extension=1,facing=south,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 12.0,
+      "y": 180
+    },
+    "extension=1,facing=west,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "y": 270
+    },
+    "extension=1,facing=west,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 6.0,
+      "y": 270
+    },
+    "extension=1,facing=west,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam1",
+      "offset": 12.0,
+      "y": 270
+    },
+    "extension=2,facing=east,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "y": 90
+    },
+    "extension=2,facing=east,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 6.0,
+      "y": 90
+    },
+    "extension=2,facing=east,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 12.0,
+      "y": 90
+    },
+    "extension=2,facing=north,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2"
+    },
+    "extension=2,facing=north,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 6.0
+    },
+    "extension=2,facing=north,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 12.0
+    },
+    "extension=2,facing=south,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "y": 180
+    },
+    "extension=2,facing=south,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 6.0,
+      "y": 180
+    },
+    "extension=2,facing=south,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 12.0,
+      "y": 180
+    },
+    "extension=2,facing=west,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "y": 270
+    },
+    "extension=2,facing=west,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 6.0,
+      "y": 270
+    },
+    "extension=2,facing=west,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam2",
+      "offset": 12.0,
+      "y": 270
+    },
+    "extension=3,facing=east,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "y": 90
+    },
+    "extension=3,facing=east,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 6.0,
+      "y": 90
+    },
+    "extension=3,facing=east,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 12.0,
+      "y": 90
+    },
+    "extension=3,facing=north,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3"
+    },
+    "extension=3,facing=north,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 6.0
+    },
+    "extension=3,facing=north,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 12.0
+    },
+    "extension=3,facing=south,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "y": 180
+    },
+    "extension=3,facing=south,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 6.0,
+      "y": 180
+    },
+    "extension=3,facing=south,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 12.0,
+      "y": 180
+    },
+    "extension=3,facing=west,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "y": 270
+    },
+    "extension=3,facing=west,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 6.0,
+      "y": 270
+    },
+    "extension=3,facing=west,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam3",
+      "offset": 12.0,
+      "y": 270
+    },
+    "extension=4,facing=east,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "y": 90
+    },
+    "extension=4,facing=east,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 6.0,
+      "y": 90
+    },
+    "extension=4,facing=east,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 12.0,
+      "y": 90
+    },
+    "extension=4,facing=north,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4"
+    },
+    "extension=4,facing=north,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 6.0
+    },
+    "extension=4,facing=north,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 12.0
+    },
+    "extension=4,facing=south,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "y": 180
+    },
+    "extension=4,facing=south,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 6.0,
+      "y": 180
+    },
+    "extension=4,facing=south,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 12.0,
+      "y": 180
+    },
+    "extension=4,facing=west,half=bottom": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "y": 270
+    },
+    "extension=4,facing=west,half=middle": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 6.0,
+      "y": 270
+    },
+    "extension=4,facing=west,half=top": {
+      "model": "circinus:block/retex/49/architects/block/horizontal_mangrove_side_beam4",
+      "offset": 12.0,
+      "y": 270
+    }
+  }
+}

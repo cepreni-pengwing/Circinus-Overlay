@@ -1,0 +1,196 @@
+{
+  "variants": {
+    "axis=x,extension=1,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=1,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=1,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=1,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks1",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=2,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=2,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=2,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=2,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks2",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=3,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=3,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=3,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=3,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks3",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=4,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=4,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=4,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=x,extension=4,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks4",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,extension=1,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack1"
+    },
+    "axis=y,extension=1,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks1"
+    },
+    "axis=y,extension=1,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks1"
+    },
+    "axis=y,extension=1,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks1"
+    },
+    "axis=y,extension=2,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack2"
+    },
+    "axis=y,extension=2,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks2"
+    },
+    "axis=y,extension=2,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks2"
+    },
+    "axis=y,extension=2,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks2"
+    },
+    "axis=y,extension=3,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack3"
+    },
+    "axis=y,extension=3,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks3"
+    },
+    "axis=y,extension=3,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks3"
+    },
+    "axis=y,extension=3,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks3"
+    },
+    "axis=y,extension=4,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack4"
+    },
+    "axis=y,extension=4,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks4"
+    },
+    "axis=y,extension=4,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks4"
+    },
+    "axis=y,extension=4,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks4"
+    },
+    "axis=z,extension=1,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack1",
+      "x": 90
+    },
+    "axis=z,extension=1,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks1",
+      "x": 90
+    },
+    "axis=z,extension=1,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks1",
+      "x": 90
+    },
+    "axis=z,extension=1,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks1",
+      "x": 90
+    },
+    "axis=z,extension=2,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack2",
+      "x": 90
+    },
+    "axis=z,extension=2,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks2",
+      "x": 90
+    },
+    "axis=z,extension=2,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks2",
+      "x": 90
+    },
+    "axis=z,extension=2,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks2",
+      "x": 90
+    },
+    "axis=z,extension=3,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack3",
+      "x": 90
+    },
+    "axis=z,extension=3,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks3",
+      "x": 90
+    },
+    "axis=z,extension=3,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks3",
+      "x": 90
+    },
+    "axis=z,extension=3,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks3",
+      "x": 90
+    },
+    "axis=z,extension=4,stack=1": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_one_stack4",
+      "x": 90
+    },
+    "axis=z,extension=4,stack=2": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_two_stacks4",
+      "x": 90
+    },
+    "axis=z,extension=4,stack=3": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_three_stacks4",
+      "x": 90
+    },
+    "axis=z,extension=4,stack=4": {
+      "model": "circinus:block/retex/49/architects/block/thin_stripped_mangrove_log_four_stacks4",
+      "x": 90
+    }
+  }
+}

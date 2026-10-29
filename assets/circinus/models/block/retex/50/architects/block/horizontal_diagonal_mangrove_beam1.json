@@ -1,0 +1,7 @@
+{
+  "parent": "architects:template/template_horizontal_diagonal_beam1",
+  "textures": {
+    "end": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain"
+  }
+}

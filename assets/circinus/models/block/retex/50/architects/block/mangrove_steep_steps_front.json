@@ -1,0 +1,11 @@
+{
+  "loader": "porting_lib:obj",
+  "model": "architects:models/obj/steep_steps_front_type2.obj",
+  "emissive_ambient": true,
+  "flip_v": true,
+  "textures": {
+    "particle": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain",
+    "top": "circinus:block/white_metal_obj_plain"
+  }
+}

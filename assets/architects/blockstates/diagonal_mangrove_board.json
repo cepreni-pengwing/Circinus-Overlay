@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "extension=1,facing=east": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board1",
+      "y": 90
+    },
+    "extension=1,facing=north": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board1"
+    },
+    "extension=1,facing=south": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board1",
+      "y": 180
+    },
+    "extension=1,facing=west": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board1",
+      "y": 270
+    },
+    "extension=2,facing=east": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board2",
+      "y": 90
+    },
+    "extension=2,facing=north": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board2"
+    },
+    "extension=2,facing=south": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board2",
+      "y": 180
+    },
+    "extension=2,facing=west": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board2",
+      "y": 270
+    },
+    "extension=3,facing=east": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board3",
+      "y": 90
+    },
+    "extension=3,facing=north": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board3"
+    },
+    "extension=3,facing=south": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board3",
+      "y": 180
+    },
+    "extension=3,facing=west": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board3",
+      "y": 270
+    },
+    "extension=4,facing=east": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board4",
+      "y": 90
+    },
+    "extension=4,facing=north": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board4"
+    },
+    "extension=4,facing=south": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board4",
+      "y": 180
+    },
+    "extension=4,facing=west": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_mangrove_board4",
+      "y": 270
+    }
+  }
+}

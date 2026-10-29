@@ -1,0 +1,7 @@
+{
+  "parent": "architects:block/diagonal_brace_inventory",
+  "textures": {
+    "end": "circinus:block/large_inscribed_sandstone_block",
+    "side": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

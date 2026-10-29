@@ -1,7 +1,7 @@
 # Circinus Overlay
 
-Resource pack overlay for Conquest Reforged, made for the **Circinus** project on the [Wildeprojekt](https://wildeprojekt.org/) Minecraft server (`/warp Circinus`). It repurposes unused Conquest blocks as metal surfaces, lettering and ropes, with PBR maps for SEUS or LabPBR (separate downloads).
+Resource pack overlay for Conquest Reforged, made for the **Circinus** project on the [Wildeprojekt](https://wildeprojekt.org/) Minecraft server (`/warp Circinus`). It repurposes unused Conquest blocks as metal surfaces, lettering and ropes, with PBR maps for SEUS.
 
-Load it above ACRP. Ropes require Create (OBJ model loader).
+Load it above ACRP.
 
 Source textures from [Poly Haven](https://polyhaven.com/) and [TextureCan](https://texturecan.com/), licensed CC0.

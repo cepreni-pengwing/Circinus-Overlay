@@ -1,0 +1,7 @@
+{
+  "parent": "architects:block/corner_shallow_diagonal_beam_inventory",
+  "textures": {
+    "end": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "architects:template/template_support_beams_bottom1",
+  "textures": {
+    "end": "circinus:block/large_inscribed_sandstone_block",
+    "side": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

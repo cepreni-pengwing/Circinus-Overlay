@@ -1,0 +1,7 @@
+{
+  "parent": "architects:block/vertical_support_beam_inventory",
+  "textures": {
+    "end": "circinus:block/large_inscribed_sandstone_block",
+    "side": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

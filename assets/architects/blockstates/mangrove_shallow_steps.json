@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "facing=east,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "y": 90
+    },
+    "facing=east,half=top": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "offset": 8.0,
+      "y": 90
+    },
+    "facing=north,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps"
+    },
+    "facing=north,half=top": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "offset": 8.0
+    },
+    "facing=south,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "y": 180
+    },
+    "facing=south,half=top": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "offset": 8.0,
+      "y": 180
+    },
+    "facing=west,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "y": 270
+    },
+    "facing=west,half=top": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_shallow_steps",
+      "offset": 8.0,
+      "y": 270
+    }
+  }
+}

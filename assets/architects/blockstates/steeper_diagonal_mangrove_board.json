@@ -1,0 +1,124 @@
+{
+  "variants": {
+    "extension=1,facing=east,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back1",
+      "y": 90
+    },
+    "extension=1,facing=east,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front1",
+      "y": 90
+    },
+    "extension=1,facing=north,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back1"
+    },
+    "extension=1,facing=north,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front1"
+    },
+    "extension=1,facing=south,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back1",
+      "y": 180
+    },
+    "extension=1,facing=south,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front1",
+      "y": 180
+    },
+    "extension=1,facing=west,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back1",
+      "y": 270
+    },
+    "extension=1,facing=west,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front1",
+      "y": 270
+    },
+    "extension=2,facing=east,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back2",
+      "y": 90
+    },
+    "extension=2,facing=east,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front2",
+      "y": 90
+    },
+    "extension=2,facing=north,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back2"
+    },
+    "extension=2,facing=north,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front2"
+    },
+    "extension=2,facing=south,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back2",
+      "y": 180
+    },
+    "extension=2,facing=south,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front2",
+      "y": 180
+    },
+    "extension=2,facing=west,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back2",
+      "y": 270
+    },
+    "extension=2,facing=west,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front2",
+      "y": 270
+    },
+    "extension=3,facing=east,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back3",
+      "y": 90
+    },
+    "extension=3,facing=east,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front3",
+      "y": 90
+    },
+    "extension=3,facing=north,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back3"
+    },
+    "extension=3,facing=north,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front3"
+    },
+    "extension=3,facing=south,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back3",
+      "y": 180
+    },
+    "extension=3,facing=south,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front3",
+      "y": 180
+    },
+    "extension=3,facing=west,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back3",
+      "y": 270
+    },
+    "extension=3,facing=west,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front3",
+      "y": 270
+    },
+    "extension=4,facing=east,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back4",
+      "y": 90
+    },
+    "extension=4,facing=east,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front4",
+      "y": 90
+    },
+    "extension=4,facing=north,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back4"
+    },
+    "extension=4,facing=north,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front4"
+    },
+    "extension=4,facing=south,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back4",
+      "y": 180
+    },
+    "extension=4,facing=south,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front4",
+      "y": 180
+    },
+    "extension=4,facing=west,half=back": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_back4",
+      "y": 270
+    },
+    "extension=4,facing=west,half=front": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_board_front4",
+      "y": 270
+    }
+  }
+}

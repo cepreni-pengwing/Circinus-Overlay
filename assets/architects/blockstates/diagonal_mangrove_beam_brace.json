@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "down=false,facing=east,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace",
+      "y": 90
+    },
+    "down=false,facing=east,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_up",
+      "y": 90
+    },
+    "down=false,facing=north,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace"
+    },
+    "down=false,facing=north,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_up"
+    },
+    "down=false,facing=south,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace",
+      "y": 180
+    },
+    "down=false,facing=south,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_up",
+      "y": 180
+    },
+    "down=false,facing=west,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace",
+      "y": 270
+    },
+    "down=false,facing=west,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_up",
+      "y": 270
+    },
+    "down=true,facing=east,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_down",
+      "y": 90
+    },
+    "down=true,facing=east,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_updown",
+      "y": 90
+    },
+    "down=true,facing=north,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_down"
+    },
+    "down=true,facing=north,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_updown"
+    },
+    "down=true,facing=south,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_down",
+      "y": 180
+    },
+    "down=true,facing=south,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_updown",
+      "y": 180
+    },
+    "down=true,facing=west,up=false": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_down",
+      "y": 270
+    },
+    "down=true,facing=west,up=true": {
+      "model": "circinus:block/retex/49/architects/block/diagonal_mangrove_beam_brace_updown",
+      "y": 270
+    }
+  }
+}

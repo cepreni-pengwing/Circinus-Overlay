@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "circinus:block/cable/cable_1"
+    },
+    "facing=east": {
+      "model": "circinus:block/cable/cable_1",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "circinus:block/cable/cable_1",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "circinus:block/cable/cable_1",
+      "y": 270
+    }
+  }
+}

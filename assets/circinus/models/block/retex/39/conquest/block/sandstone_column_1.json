@@ -1,0 +1,12 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/retex/39/conquest/block/sandstone_column_1.obj",
+  "textures": {
+    "pipe": "circinus:block/white_metal_column_plain",
+    "flange": "circinus:block/white_metal_column_plain",
+    "orig": "circinus:block/white_metal_column_plain",
+    "particle": "circinus:block/white_metal_column_plain"
+  }
+}

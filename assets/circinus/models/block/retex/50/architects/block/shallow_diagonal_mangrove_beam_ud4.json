@@ -1,0 +1,7 @@
+{
+  "parent": "architects:template/template_shallow_diagonal_beam_ud4",
+  "textures": {
+    "end": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain"
+  }
+}

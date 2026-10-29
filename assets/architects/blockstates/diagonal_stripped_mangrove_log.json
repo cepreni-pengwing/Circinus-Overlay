@@ -1,0 +1,132 @@
+{
+  "variants": {
+    "extension=1,rotation=0": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log1",
+      "y": 0
+    },
+    "extension=1,rotation=1": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner1",
+      "y": 90
+    },
+    "extension=1,rotation=2": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log1",
+      "y": 90
+    },
+    "extension=1,rotation=3": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner1",
+      "y": 180
+    },
+    "extension=1,rotation=4": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log1",
+      "y": 180
+    },
+    "extension=1,rotation=5": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner1",
+      "y": 270
+    },
+    "extension=1,rotation=6": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log1",
+      "y": 270
+    },
+    "extension=1,rotation=7": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner1",
+      "y": 0
+    },
+    "extension=2,rotation=0": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log2",
+      "y": 0
+    },
+    "extension=2,rotation=1": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner2",
+      "y": 90
+    },
+    "extension=2,rotation=2": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log2",
+      "y": 90
+    },
+    "extension=2,rotation=3": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner2",
+      "y": 180
+    },
+    "extension=2,rotation=4": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log2",
+      "y": 180
+    },
+    "extension=2,rotation=5": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner2",
+      "y": 270
+    },
+    "extension=2,rotation=6": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log2",
+      "y": 270
+    },
+    "extension=2,rotation=7": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner2",
+      "y": 0
+    },
+    "extension=3,rotation=0": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log3",
+      "y": 0
+    },
+    "extension=3,rotation=1": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner3",
+      "y": 90
+    },
+    "extension=3,rotation=2": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log3",
+      "y": 90
+    },
+    "extension=3,rotation=3": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner3",
+      "y": 180
+    },
+    "extension=3,rotation=4": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log3",
+      "y": 180
+    },
+    "extension=3,rotation=5": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner3",
+      "y": 270
+    },
+    "extension=3,rotation=6": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log3",
+      "y": 270
+    },
+    "extension=3,rotation=7": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner3",
+      "y": 0
+    },
+    "extension=4,rotation=0": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log4",
+      "y": 0
+    },
+    "extension=4,rotation=1": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner4",
+      "y": 90
+    },
+    "extension=4,rotation=2": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log4",
+      "y": 90
+    },
+    "extension=4,rotation=3": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner4",
+      "y": 180
+    },
+    "extension=4,rotation=4": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log4",
+      "y": 180
+    },
+    "extension=4,rotation=5": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner4",
+      "y": 270
+    },
+    "extension=4,rotation=6": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log4",
+      "y": 270
+    },
+    "extension=4,rotation=7": {
+      "model": "circinus:block/retex/50/architects/block/diagonal_stripped_mangrove_log_corner4",
+      "y": 0
+    }
+  }
+}

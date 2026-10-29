@@ -1,0 +1,156 @@
+{
+  "variants": {
+    "extension=1,facing=east,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom1",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=1,facing=east,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top1",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=1,facing=north,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom1",
+      "yoffset": 6
+    },
+    "extension=1,facing=north,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top1",
+      "yoffset": 6
+    },
+    "extension=1,facing=south,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom1",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=1,facing=south,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top1",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=1,facing=west,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom1",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=1,facing=west,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top1",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=2,facing=east,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom2",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=2,facing=east,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top2",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=2,facing=north,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom2",
+      "yoffset": 6
+    },
+    "extension=2,facing=north,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top2",
+      "yoffset": 6
+    },
+    "extension=2,facing=south,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom2",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=2,facing=south,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top2",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=2,facing=west,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom2",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=2,facing=west,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top2",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=3,facing=east,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom3",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=3,facing=east,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top3",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=3,facing=north,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom3",
+      "yoffset": 6
+    },
+    "extension=3,facing=north,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top3",
+      "yoffset": 6
+    },
+    "extension=3,facing=south,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom3",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=3,facing=south,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top3",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=3,facing=west,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom3",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=3,facing=west,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top3",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=4,facing=east,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom4",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=4,facing=east,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top4",
+      "y": 90,
+      "yoffset": 6
+    },
+    "extension=4,facing=north,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom4",
+      "yoffset": 6
+    },
+    "extension=4,facing=north,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top4",
+      "yoffset": 6
+    },
+    "extension=4,facing=south,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom4",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=4,facing=south,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top4",
+      "y": 180,
+      "yoffset": 6
+    },
+    "extension=4,facing=west,half=bottom": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_bottom4",
+      "y": 270,
+      "yoffset": 6
+    },
+    "extension=4,facing=west,half=top": {
+      "model": "circinus:block/retex/50/architects/block/half_diagonal_mangrove_beam_top4",
+      "y": 270,
+      "yoffset": 6
+    }
+  }
+}

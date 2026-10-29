@@ -1,0 +1,244 @@
+{
+  "variants": {
+    "extension=1,facing=east,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left1",
+      "y": 90
+    },
+    "extension=1,facing=east,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left1",
+      "y": 90
+    },
+    "extension=1,facing=east,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right1",
+      "y": 90
+    },
+    "extension=1,facing=east,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right1",
+      "y": 90
+    },
+    "extension=1,facing=north,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left1"
+    },
+    "extension=1,facing=north,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left1"
+    },
+    "extension=1,facing=north,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right1"
+    },
+    "extension=1,facing=north,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right1"
+    },
+    "extension=1,facing=south,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left1",
+      "y": 180
+    },
+    "extension=1,facing=south,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left1",
+      "y": 180
+    },
+    "extension=1,facing=south,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right1",
+      "y": 180
+    },
+    "extension=1,facing=south,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right1",
+      "y": 180
+    },
+    "extension=1,facing=west,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left1",
+      "y": 270
+    },
+    "extension=1,facing=west,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left1",
+      "y": 270
+    },
+    "extension=1,facing=west,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right1",
+      "y": 270
+    },
+    "extension=1,facing=west,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right1",
+      "y": 270
+    },
+    "extension=2,facing=east,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left2",
+      "y": 90
+    },
+    "extension=2,facing=east,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left2",
+      "y": 90
+    },
+    "extension=2,facing=east,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right2",
+      "y": 90
+    },
+    "extension=2,facing=east,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right2",
+      "y": 90
+    },
+    "extension=2,facing=north,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left2"
+    },
+    "extension=2,facing=north,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left2"
+    },
+    "extension=2,facing=north,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right2"
+    },
+    "extension=2,facing=north,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right2"
+    },
+    "extension=2,facing=south,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left2",
+      "y": 180
+    },
+    "extension=2,facing=south,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left2",
+      "y": 180
+    },
+    "extension=2,facing=south,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right2",
+      "y": 180
+    },
+    "extension=2,facing=south,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right2",
+      "y": 180
+    },
+    "extension=2,facing=west,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left2",
+      "y": 270
+    },
+    "extension=2,facing=west,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left2",
+      "y": 270
+    },
+    "extension=2,facing=west,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right2",
+      "y": 270
+    },
+    "extension=2,facing=west,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right2",
+      "y": 270
+    },
+    "extension=3,facing=east,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left3",
+      "y": 90
+    },
+    "extension=3,facing=east,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left3",
+      "y": 90
+    },
+    "extension=3,facing=east,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right3",
+      "y": 90
+    },
+    "extension=3,facing=east,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right3",
+      "y": 90
+    },
+    "extension=3,facing=north,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left3"
+    },
+    "extension=3,facing=north,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left3"
+    },
+    "extension=3,facing=north,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right3"
+    },
+    "extension=3,facing=north,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right3"
+    },
+    "extension=3,facing=south,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left3",
+      "y": 180
+    },
+    "extension=3,facing=south,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left3",
+      "y": 180
+    },
+    "extension=3,facing=south,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right3",
+      "y": 180
+    },
+    "extension=3,facing=south,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right3",
+      "y": 180
+    },
+    "extension=3,facing=west,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left3",
+      "y": 270
+    },
+    "extension=3,facing=west,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left3",
+      "y": 270
+    },
+    "extension=3,facing=west,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right3",
+      "y": 270
+    },
+    "extension=3,facing=west,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right3",
+      "y": 270
+    },
+    "extension=4,facing=east,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left4",
+      "y": 90
+    },
+    "extension=4,facing=east,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left4",
+      "y": 90
+    },
+    "extension=4,facing=east,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right4",
+      "y": 90
+    },
+    "extension=4,facing=east,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right4",
+      "y": 90
+    },
+    "extension=4,facing=north,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left4"
+    },
+    "extension=4,facing=north,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left4"
+    },
+    "extension=4,facing=north,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right4"
+    },
+    "extension=4,facing=north,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right4"
+    },
+    "extension=4,facing=south,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left4",
+      "y": 180
+    },
+    "extension=4,facing=south,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left4",
+      "y": 180
+    },
+    "extension=4,facing=south,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right4",
+      "y": 180
+    },
+    "extension=4,facing=south,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right4",
+      "y": 180
+    },
+    "extension=4,facing=west,hinge=left,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_left4",
+      "y": 270
+    },
+    "extension=4,facing=west,hinge=left,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_left4",
+      "y": 270
+    },
+    "extension=4,facing=west,hinge=right,toggle=false": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_outer_right4",
+      "y": 270
+    },
+    "extension=4,facing=west,hinge=right,toggle=true": {
+      "model": "circinus:block/retex/50/architects/block/steeper_diagonal_mangrove_side_beam_inner_right4",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "architects:block/horizontal_platform_inventory",
+  "textures": {
+    "all": "circinus:block/large_inscribed_sandstone_block"
+  }
+}

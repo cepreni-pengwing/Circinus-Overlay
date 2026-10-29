@@ -4,7 +4,7 @@ from PIL import Image, ImageChops, ImageFilter, ImageMath, ImageOps
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NS = 'circinus'
 TILE = 32
-GENERATED = [f'assets/{NS}', 'assets/conquest', 'assets/minecraft', 'assets/architects', 'labpbr']
+GENERATED = [f'assets/{NS}', 'assets/conquest', 'assets/minecraft', 'assets/architects']
 LIB = os.path.join(ROOT, 'lib')
 
 
@@ -57,8 +57,8 @@ class Assets:
 
 def sources(argv):
     jar = argv[1] if len(argv) > 1 else glob.glob(os.path.join(LIB, 'ConquestReforged*.jar'))[0]
-    acrp = argv[2] if len(argv) > 2 else (glob.glob(os.path.join(LIB, 'ACRP*.zip')) or [None])[0]
-    return [p for p in (acrp, jar) if p] + glob.glob(os.path.join(LIB, 'Architects*.jar'))
+    acrp = argv[2] if len(argv) > 2 else next((p for p in glob.glob(os.path.join(LIB, 'ACRP*.zip')) if 'Patch' not in p), None)
+    return glob.glob(os.path.join(LIB, 'ACRP Architects Patch*.zip')) + [p for p in (acrp, jar) if p] + glob.glob(os.path.join(LIB, 'Architects*.jar'))
 
 
 def models_in(o, acc):
@@ -228,6 +228,24 @@ def process(t, size):
     fit = lambda im: im if im.size == size else im.resize(size, Image.LANCZOS)
     rgb, arm, nrm = fit(src('diff').convert('RGB')), fit(src('arm').convert('RGB')), fit(src('nor_gl').convert('RGB'))
     F = lambda im: im.convert('F')
+    def rust_parts():
+        rsrc = lambda m: fit(Image.open(os.path.join(ROOT, 'src', f"{t['rust_asset']}_{m}.png")).convert('RGB'))
+        rgb4, arm4, nrm4 = rsrc('diff'), rsrc('arm'), rsrc('nor_gl')
+        ry, rcb, rcr = rgb4.convert('YCbCr').split()
+        rr = ImageMath.lambda_eval(lambda a: (a['cr'] - a['cb'] + 64) * 2, cb=F(rcb), cr=F(rcr)).convert('L')
+        m = rr.point(lambda v, q=pct(rr, 0.5): 255 if v > q else 0)
+        blur = lambda im: im.filter(ImageFilter.GaussianBlur(16))
+        mb = blur(m)
+        fill = lambda im: Image.merge(im.mode, [ImageMath.lambda_eval(lambda a: a['c'] / a['max'](a['w'], 1) * 255, c=F(blur(ImageChops.multiply(ch, m))), w=F(mb)).convert('L') for ch in im.split()])
+        detail = ImageMath.lambda_eval(lambda a: a['min'](a['max'](a['y'] / a['max'](a['b'], 1), 0.7), 1.3), y=F(ry), b=F(blur(ry)))
+        frgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['d'], c=F(ch), d=detail).convert('L') for ch in fill(rgb4).split()])
+        conf = mb.point(lambda v: max(0, min(255, (v - 20) * 4)))
+        med_rgb = Image.new('RGB', size, tuple(median(ch, m) for ch in rgb4.split()))
+        med_rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['d'], c=F(ch), d=detail).convert('L') for ch in med_rgb.split()])
+        frgb = Image.composite(frgb, med_rgb, conf)
+        farm = Image.composite(fill(arm4), Image.new('RGB', size, tuple(median(ch, m) for ch in arm4.split())), conf)
+        rust = Image.composite(rgb4, frgb, m), Image.composite(arm4, farm, m), nrm4
+        return rust, rr
     if 'color' not in t:
         e = Image.new('L', size, 0)
         if t.get('blur'):
@@ -250,30 +268,21 @@ def process(t, size):
             row.putdata([max(0, min(255, round(128 * (1 + amp * v / mx + jit * r.uniform(-1, 1))))) for v in pr])
             f = row.resize(size, Image.NEAREST)
             rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['f'] / 128, c=F(ch), f=F(f)).convert('L') for ch in rgb.split()])
+        if t.get('rust_asset'):
+            rust, rr = rust_parts()
+            p = pct(rr, t.get('rust_full_cut', 0.68))
+            op = t.get('rust_opacity', 0.85)
+            w = rr.point(lambda v: round(255 * op * min(1, max(0, (v - p + 10) / 20)))).filter(ImageFilter.GaussianBlur(1))
+            rgb = Image.composite(rust[0], rgb, w)
+            arm = Image.composite(rust[1], arm, w)
+            nrm = Image.composite(rust[2], nrm, w)
         return spec_layers(t, rgb.convert('RGBA'), arm, nrm), e, e
     y, py, d8, e, paint = analyse(rgb)
     noise = tile_noise(size, t.get('erosion_cells', 6), zlib.crc32(t['name'].encode()))
     thr = pct(noise, 1 - t.get('erosion', 0.12))
     k = noise.point(lambda v: max(0, min(255, (v - thr) * 4)))
     w = ImageMath.lambda_eval(lambda a: a['e'] * a['k'] / 255 * 0.85, e=F(e), k=F(k)).convert('L')
-    rust = None
-    if t.get('rust_asset'):
-        rsrc = lambda m: fit(Image.open(os.path.join(ROOT, 'src', f"{t['rust_asset']}_{m}.png")).convert('RGB'))
-        rgb4, arm4, nrm4 = rsrc('diff'), rsrc('arm'), rsrc('nor_gl')
-        ry, rcb, rcr = rgb4.convert('YCbCr').split()
-        rr = ImageMath.lambda_eval(lambda a: (a['cr'] - a['cb'] + 64) * 2, cb=F(rcb), cr=F(rcr)).convert('L')
-        m = rr.point(lambda v, q=pct(rr, 0.5): 255 if v > q else 0)
-        blur = lambda im: im.filter(ImageFilter.GaussianBlur(16))
-        mb = blur(m)
-        fill = lambda im: Image.merge(im.mode, [ImageMath.lambda_eval(lambda a: a['c'] / a['max'](a['w'], 1) * 255, c=F(blur(ImageChops.multiply(ch, m))), w=F(mb)).convert('L') for ch in im.split()])
-        detail = ImageMath.lambda_eval(lambda a: a['min'](a['max'](a['y'] / a['max'](a['b'], 1), 0.7), 1.3), y=F(ry), b=F(blur(ry)))
-        frgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['d'], c=F(ch), d=detail).convert('L') for ch in fill(rgb4).split()])
-        conf = mb.point(lambda v: max(0, min(255, (v - 20) * 4)))
-        med_rgb = Image.new('RGB', size, tuple(median(ch, m) for ch in rgb4.split()))
-        med_rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['d'], c=F(ch), d=detail).convert('L') for ch in med_rgb.split()])
-        frgb = Image.composite(frgb, med_rgb, conf)
-        farm = Image.composite(fill(arm4), Image.new('RGB', size, tuple(median(ch, m) for ch in arm4.split())), conf)
-        rust = Image.composite(rgb4, frgb, m), Image.composite(arm4, farm, m), nrm4
+    rust, rr = rust_parts() if t.get('rust_asset') else (None, None)
     if t.get('rust') == 'full':
         p = pct(rr, t.get('rust_full_cut', 0.68))
         w = rr.point(lambda v: round(255 * min(1, max(0, (v - p + 10) / 20)))).filter(ImageFilter.GaussianBlur(1))
@@ -317,6 +326,11 @@ def process(t, size):
 
 def spec_layers(t, diffuse, arm, nrm):
     nrm.putalpha(255)
+    if t.get('spread'):
+        rgb, al = diffuse.convert('RGB'), diffuse.getchannel('A')
+        mean = tuple(round(sum(ch.getdata()) / (rgb.size[0] * rgb.size[1])) for ch in rgb.split())
+        diffuse = Image.blend(Image.new('RGB', rgb.size, mean), rgb, t['spread']).convert('RGBA')
+        diffuse.putalpha(al)
     _, rough, metal = arm.split()
     sm, mt = t.get('smoothness', 1.0), t.get('metalness', 1.0)
     spec = Image.merge('RGBA', (ImageOps.invert(rough).point(lambda v: round(v * sm)), metal.point(lambda v: round(v * mt)), Image.new('L', arm.size, 0), Image.new('L', arm.size, 255)))
@@ -340,7 +354,7 @@ def write_layers(layers, pick, name, gw, gh):
         f.write(f'method=repeat\nwidth={gw}\nheight={gh}\ntiles=1-{gw * gh}\nmatchTiles={NS}:textures/block/{name}\n')
 
 
-def obj_mesh(parts, boxes, sides=12, tiles=1, t0=0):
+def obj_mesh(parts, boxes, sides=12, tiles=1, t0=0, wrap=False):
     v, vt, vn, f = [], [], [], []
     cnt = [t0]
     def vert(p, n, uv):
@@ -363,9 +377,9 @@ def obj_mesh(parts, boxes, sides=12, tiles=1, t0=0):
             out.append((tuple(c[i] + r * d[i] for i in range(3)), d, k / sides))
         return out
     def sweep(path, r, mat, caps=(False, False)):
-        ti = cnt[0] % (tiles * tiles)
+        ti = cnt[0] % (tiles if wrap else tiles * tiles)
         cnt[0] += 1
-        tv = lambda uv: ((ti % tiles + uv[0]) / tiles, (ti // tiles + uv[1]) / tiles)
+        tv = (lambda uv: (uv[0], (ti + uv[1]) / tiles)) if wrap else (lambda uv: ((ti % tiles + uv[0]) / tiles, (ti // tiles + uv[1]) / tiles))
         length, rings = 0, []
         for j, (c, n1, n2) in enumerate(path):
             if j:
@@ -485,7 +499,10 @@ def main():
                 dx, dy = gw * TILE // 2, gh * TILE // 2
                 pick = w if t.get('rust') else ImageOps.invert(e)
                 write_layers({k: ImageChops.offset(im, dx, dy) for k, im in layers.items()}, ImageChops.offset(pick, dx, dy), f'{name}_shift', gw, gh)
-            if t.get('plain'):
+            if t.get('period'):
+                for sfx, img in process(t, (t['period'] * TILE, t['period'] * TILE))[0].items():
+                    img.save(out(f'assets/{NS}/textures/block/{name}_plain{sfx}.png'))
+            elif t.get('plain'):
                 k = t['plain']
                 hl, hp = layers, (w if t.get('rust') else ImageOps.invert(e))
                 if t.get('shifted'):
@@ -614,10 +631,10 @@ def main():
                             src_m = a.json(model_path(src_m['parent']))
                         keep = [e for i, e in enumerate(src_m.get('elements', [])) if i in rt['obj'].get('keep', [])]
                         cp = copy.split(':', 1)[1]
-                        nt = rt['obj'].get('tiles', 1)
-                        for ti in range(nt * nt):
+                        nt, wr = rt['obj'].get('tiles', 1), rt['obj'].get('wrap', False)
+                        for ti in range(nt if wr else nt * nt):
                             with open(out(f'assets/{NS}/models/{cp}{"_" + str(ti) if ti else ""}.obj'), 'w', newline='\n') as fo:
-                                fo.write(obj_mesh(rt['obj']['parts'], keep, tiles=nt, t0=ti))
+                                fo.write(obj_mesh(rt['obj']['parts'], keep, tiles=nt, t0=ti, wrap=wr))
                         with open(out(f'assets/{NS}/models/{cp.rsplit("/", 1)[0]}/pipe.mtl'), 'w', newline='\n') as fo:
                             fo.write('newmtl pipe\nmap_Kd #pipe\nnewmtl flange\nmap_Kd #flange\nnewmtl orig\nmap_Kd #orig\n')
                         orig = md.get('textures', {}).get('orig') or json.loads(json.dumps(a.json(model_path(m)))).get('textures', {}).get('pipe')
@@ -660,7 +677,7 @@ def main():
                             x.pop('y', None)
                     if rt.get('obj') and rt['obj'].get('tiles', 1) > 1:
                         alts = [copy]
-                        for ti in range(1, rt['obj']['tiles'] ** 2):
+                        for ti in range(1, rt['obj']['tiles'] if rt['obj'].get('wrap') else rt['obj']['tiles'] ** 2):
                             wjson(model_path(f'{copy}_{ti}'), dict(md, model=md['model'][:-4] + f'_{ti}.obj'))
                             alts.append(f'{copy}_{ti}')
                         bs['variants'][k] = [dict(x, model=c) for c in alts]
@@ -804,16 +821,6 @@ def main():
               'additions': [{'items': list(dict.fromkeys(tab))}]})
     for ns, entries in lang.items():
         wjson(f'assets/{ns}/lang/en_us.json', dict(sorted(entries.items())))
-    for r, _, fs in os.walk(os.path.join(ROOT, 'assets')):
-        for f in fs:
-            if f.endswith(('_s.png', '_n.png')):
-                p = os.path.join(r, f)
-                R, G, B, A = Image.open(p).convert('RGBA').split()
-                if f.endswith('_s.png'):
-                    G = G.point(lambda m: 230 if m >= 230 else min(229, round(10 + 0.96 * m)))
-                else:
-                    B = Image.new('L', B.size, 255)
-                Image.merge('RGBA', (R, G, B, A)).save(out(os.path.join('labpbr', os.path.relpath(p, ROOT))))
 
 
 if __name__ == '__main__':

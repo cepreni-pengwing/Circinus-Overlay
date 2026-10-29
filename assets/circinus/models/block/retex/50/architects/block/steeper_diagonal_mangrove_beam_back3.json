@@ -1,0 +1,7 @@
+{
+  "parent": "architects:template/template_steeper_diagonal_beam_back3",
+  "textures": {
+    "end": "circinus:block/white_metal_obj_plain",
+    "side": "circinus:block/white_metal_obj_plain"
+  }
+}

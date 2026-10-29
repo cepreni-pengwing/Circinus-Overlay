@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,half=back": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_back",
+      "y": 90
+    },
+    "facing=east,half=front": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_front",
+      "y": 90
+    },
+    "facing=north,half=back": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_back"
+    },
+    "facing=north,half=front": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_front"
+    },
+    "facing=south,half=back": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_back",
+      "y": 180
+    },
+    "facing=south,half=front": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_front",
+      "y": 180
+    },
+    "facing=west,half=back": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_back",
+      "y": 270
+    },
+    "facing=west,half=front": {
+      "model": "circinus:block/retex/50/architects/block/mangrove_steep_steps_front",
+      "y": 270
+    }
+  }
+}
