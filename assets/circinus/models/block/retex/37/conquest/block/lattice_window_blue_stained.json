@@ -1,0 +1,104 @@
+{
+  "parent": "conquest:block/templates/parent_lattice_window",
+  "textures": {
+    "particle": "circinus:block/masked/large_inscribed_sandstone_block/blue_stained_glass"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        -16,
+        7.5
+      ],
+      "to": [
+        16,
+        0,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        7.5
+      ],
+      "to": [
+        16,
+        16,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        16,
+        7.5
+      ],
+      "to": [
+        16,
+        32,
+        8.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#particle"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "variants": {
+    "toggle=1,facing=south": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "y": 180
+      }
+    ],
+    "toggle=1,facing=west": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "y": 270
+      }
+    ],
+    "toggle=1,facing=north": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange"
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1"
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2"
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3"
+      }
+    ],
+    "toggle=1,facing=east": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "y": 90
+      }
+    ],
+    "toggle=2,facing=south": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a"
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1"
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2"
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3"
+      }
+    ],
+    "toggle=2,facing=west": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "y": 90
+      }
+    ],
+    "toggle=2,facing=north": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "y": 180
+      }
+    ],
+    "toggle=2,facing=east": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "y": 270
+      }
+    ],
+    "toggle=3,facing=south": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "x": 90,
+        "y": 270
+      }
+    ],
+    "toggle=3,facing=west": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "x": 90
+      }
+    ],
+    "toggle=3,facing=north": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "toggle=3,facing=east": [
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_1",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_2",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/32/conquest/block/red_t_flange_3",
+        "x": 90,
+        "y": 180
+      }
+    ],
+    "toggle=4,facing=south": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "x": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "x": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "x": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "x": 180
+      }
+    ],
+    "toggle=4,facing=west": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "x": 180,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "x": 180,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "x": 180,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "x": 180,
+        "y": 90
+      }
+    ],
+    "toggle=4,facing=north": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "x": 180,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "x": 180,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "x": 180,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "x": 180,
+        "y": 180
+      }
+    ],
+    "toggle=4,facing=east": [
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a",
+        "x": 180,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_1",
+        "x": 180,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_2",
+        "x": 180,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/33/conquest/block/red_t_flange_a_3",
+        "x": 180,
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=north,open=false": {
+      "model": "circinus:block/retex/44/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 180
+    },
+    "facing=south,open=false": {
+      "model": "circinus:block/retex/44/conquest/block/horizontal_spruce_wood_railing_corner"
+    },
+    "facing=east,open=false": {
+      "model": "circinus:block/retex/44/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 270
+    },
+    "facing=west,open=false": {
+      "model": "circinus:block/retex/44/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 90
+    },
+    "facing=north,open=true": {
+      "model": "circinus:block/retex/45/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 180
+    },
+    "facing=south,open=true": {
+      "model": "circinus:block/retex/45/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 0
+    },
+    "facing=east,open=true": {
+      "model": "circinus:block/retex/45/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 270
+    },
+    "facing=west,open=true": {
+      "model": "circinus:block/retex/45/conquest/block/horizontal_spruce_wood_railing_corner",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "variants": {
+    "type=bottom,facing=south": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "y": 90
+      }
+    ],
+    "type=bottom,facing=west": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "y": 180
+      }
+    ],
+    "type=bottom,facing=north": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "y": 270
+      }
+    ],
+    "type=bottom,facing=east": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange"
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1"
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2"
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3"
+      }
+    ],
+    "type=top,facing=south": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "type=top,facing=west": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "x": 90,
+        "y": 180
+      }
+    ],
+    "type=top,facing=north": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "x": 90,
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "x": 90,
+        "y": 270
+      }
+    ],
+    "type=top,facing=east": [
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_1",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_2",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/36/conquest/block/red_3_way_flange_3",
+        "x": 90
+      }
+    ]
+  }
+}

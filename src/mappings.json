@@ -3,15 +3,32 @@
   "creative_tab": {"name": "Circinus Overlay", "icon": "conquest:large_cobblestone_roman_oven"},
   "names": {
     "architects:marble_lintel": "White Metal Lintel",
+    "architects:smooth_marble_column": "White Metal Column",
     "conquest:red_pipe": "Black Glass Window",
     "conquest:horizontal_metal_railings": "White Metal Railings",
     "conquest:horizontal_metal_railings_corner": "White Metal Railings Corner",
+    "conquest:horizontal_spruce_wood_railing_corner": "White Metal Diagonal Railings Corner",
     "conquest:diagonal_metal_railings": "White Metal Diagonal Railings",
-    "conquest:simple_warp_weighted_loom": "Rope Carrier"
+    "conquest:simple_warp_weighted_loom": "Rope Carrier",
+    "conquest:old_pipe": "White Metal Lattice",
+    "conquest:green_mounted_pipe": "Green Metal Pipe",
+    "conquest:green_gate_valve": "Green Metal Gate Valve",
+    "conquest:green_elbow_flange": "Green Metal Elbow",
+    "conquest:green_cross_flange": "Green Metal Cross",
+    "conquest:green_t_flange": "Green Metal T-Piece",
+    "conquest:red_mounted_pipe": "Red Metal Pipe",
+    "conquest:red_elbow_flange": "Red Metal Elbow",
+    "conquest:red_cross_flange": "Red Metal Cross",
+    "conquest:red_t_flange": "Red Metal T-Piece",
+    "conquest:red_5_way_flange": "Red Metal Gate Valve",
+    "conquest:green_3_way_flange": "Green Metal 3-Way",
+    "conquest:red_3_way_flange": "Red Metal 3-Way"
   },
   "textures": [
     {
       "name": "mossy_sandstone",
+      "plain": 2,
+      "shifted": true,
       "display_name": "Green Metal Plating",
       "asset": "blue_metal_plate",
       "color": "#0c3f33",
@@ -39,12 +56,15 @@
     },
     {
       "name": "large_inscribed_sandstone_block",
+      "plain": 2,
       "display_name": "White Metal",
       "asset": "rusty_metal_04",
       "color": "#fffffd",
       "grid": [16, 16],
       "erosion": 0.12,
-      "targets": ["conquest:large_inscribed_sandstone_block"],
+      "targets": ["conquest:large_inscribed_sandstone_block", "conquest:yellow_pipe"],
+      "names": {"conquest:yellow_pipe": "White Metal Wheel"},
+      "obj_size": 64,
       "detail": 0.45,
       "flatten": 24
     },
@@ -111,26 +131,14 @@
       "edge_flip": ["stairs"]
     },
     {
-      "name": "light_gray_metal_grid",
-      "display_name": "Light Gray Metal Plating",
-      "asset": "rusty_metal_grid",
-      "color": "#b0b1ad",
-      "grid": [16, 16],
-      "erosion": 0.04,
-      "smoothness": 3.5,
-      "obj_size": 64,
-      "targets": ["conquest:mossy_red_clay_brick", "conquest:yellow_pipe"],
-      "names": {"conquest:yellow_pipe": "Light Gray Metal Wheel"}
-    },
-    {
       "name": "corrugated_metal",
       "display_name": "Corrugated Metal",
       "asset": "corrugated_iron",
       "grid": [8, 8],
       "metalness": 0.45,
-      "blur": 0.5,
-      "height_shade": [0.14, 0.2],
-      "height_sharpen": 3,
+      "blur": 1,
+      "height_shade": [0.2, 0.2],
+      "bands": [0.25, 0.05],
       "targets": ["conquest:red_clay_brick"]
     },
     {
@@ -141,7 +149,42 @@
       "grid": [16, 16],
       "erosion": 0,
       "targets": []
+    },
+    {
+      "name": "buoy_red",
+      "plain": 1,
+      "asset": "rusty_metal_02",
+      "color": "#c81e1e",
+      "grid": [16, 16],
+      "erosion": 0,
+      "smoothness": 0.25,
+      "metalness": 0,
+      "targets": []
+    },
+    {
+      "name": "buoy_white",
+      "plain": 1,
+      "asset": "rusty_metal_04",
+      "color": "#f4f2ee",
+      "grid": [16, 16],
+      "erosion": 0,
+      "smoothness": 0.25,
+      "metalness": 0,
+      "targets": []
+    },
+    {
+      "name": "wine_red_metal",
+      "plain": 2,
+      "display_name": "Wine Red Metal",
+      "asset": "blue_metal_plate",
+      "color": "#9e2a2f",
+      "grid": [16, 16],
+      "erosion": 0.12,
+      "targets": []
     }
+  ],
+  "doors": [
+    {"block": "minecraft:birch_door", "name": "White Metal Door", "material": "large_inscribed_sandstone_block", "shade": 0.72, "frame": 2, "window": [4, 4, 12, 12], "bar": 1, "top": "minecraft:block/birch_door_top", "bottom": "minecraft:block/birch_door_bottom", "item": "minecraft:item/birch_door"}
   ],
   "glyphs": [
     {
@@ -186,10 +229,59 @@
     }
   ],
   "retexture": [
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "1", "facing": "north"}, "no_rotation": true, "item": true, "obj": {"tiles": 2, "parts": [["tube", "y", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "1", "facing": "east"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "1", "facing": "south"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "1", "facing": "west"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "2", "facing": ["north", "south"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "2", "facing": ["east", "west"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "3", "facing": "north"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "3", "facing": "south"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "3", "facing": "east"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "3", "facing": "west"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "4", "facing": ["north", "south"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_mounted_pipe"], "when": {"toggle": "4", "facing": ["east", "west"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_gate_valve"], "when": {"toggle": ["1", "2", "4"]}, "item": true, "cutout": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["flange", "z", 2.03, 3.03], ["tube", "z", 3, 5.2, 3.1, [false, false], "flange"], ["tube", "z", 0.56, 2.06, 1.6, [true, true], "flange"], ["tube", "z", -0.94, 0.56, 0.55, [true, false], "flange"]], "keep": [6]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain", "orig": {"material": "large_inscribed_sandstone_block_plain", "mask": "conquest:block/2_advanced_refined/2_metal/pipe_green"}}},
+    {"blocks": ["conquest:green_gate_valve"], "when": {"toggle": "3"}, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["tube", "x", 1, 15, 3.1, [false, false]], ["flange", "z", 2.03, 3.03], ["tube", "z", 3, 5.2, 3.1, [false, false], "flange"], ["tube", "z", 0.56, 2.06, 1.6, [true, true], "flange"], ["tube", "z", -0.94, 0.56, 0.55, [true, false], "flange"]], "keep": [6]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain", "orig": {"material": "large_inscribed_sandstone_block_plain", "mask": "conquest:block/2_advanced_refined/2_metal/pipe_green"}}},
+    {"blocks": ["conquest:green_elbow_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["bend", [15, 1, 8], 7, 180, 90]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_cross_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["tube", "x", 1, 15, 3.1, [false, false]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_t_flange"], "when": {"toggle": ["1", "3"]}, "item": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["tube", "x", 8, 15, 3.1, [false, false]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:green_t_flange"], "when": {"toggle": ["2", "4"]}, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "x", 1, 15, 3.1, [false, false]], ["tube", "y", 8, 15, 3.1, [false, false]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "1", "facing": "north"}, "no_rotation": true, "item": true, "obj": {"tiles": 2, "parts": [["tube", "y", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "1", "facing": "east"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "1", "facing": "south"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "1", "facing": "west"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "y", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "2", "facing": ["north", "south"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "2", "facing": ["east", "west"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", 0, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "3", "facing": "north"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "3", "facing": "south"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "3", "facing": "east"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", 0, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "3", "facing": "west"}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", -16, 16, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "4", "facing": ["north", "south"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "x", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_mounted_pipe"], "when": {"toggle": "4", "facing": ["east", "west"]}, "no_rotation": true, "obj": {"tiles": 2, "parts": [["tube", "z", -16, 32, 3.1, [true, true]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_elbow_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["bend", [15, 1, 8], 7, 180, 90]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_cross_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["tube", "x", 1, 15, 3.1, [false, false]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_t_flange"], "when": {"toggle": ["1", "3"]}, "item": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["tube", "x", 8, 15, 3.1, [false, false]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_t_flange"], "when": {"toggle": ["2", "4"]}, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "x", 15, 16, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "x", 1, 15, 3.1, [false, false]], ["tube", "y", 8, 15, 3.1, [false, false]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain"}},
+    {"blocks": ["conquest:red_5_way_flange"], "source": "conquest:block/red_gate_valve", "item": true, "cutout": true, "obj": {"tiles": 2, "parts": [["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 15, 16, 4.1, [true, true], "pipe"], ["tube", "y", 1, 15, 3.1, [false, false]], ["flange", "z", 2.03, 3.03], ["tube", "z", 3, 5.2, 3.1, [false, false], "flange"], ["tube", "z", 0.56, 2.06, 1.6, [true, true], "flange"], ["tube", "z", -0.94, 0.56, 0.55, [true, false], "flange"]], "keep": [6]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain", "orig": {"material": "large_inscribed_sandstone_block_plain", "mask": "conquest:block/2_advanced_refined/2_metal/pipe_red"}}},
+    {"blocks": ["conquest:green_3_way_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "z", 15, 16, 4.1, [true, true], "pipe"], ["bend", [1, 1, 8], 7, 0, 90], ["bend", [8, 1, 15], 7, 180, 90, [2, 1]], ["bend", [1, 8, 15], 7, -90, 0, [0, 2]]]}, "textures": {"pipe": "mossy_sandstone_plain", "flange": "large_inscribed_sandstone_block_plain", "orig": "mossy_sandstone_plain"}},
+    {"blocks": ["conquest:red_3_way_flange"], "item": true, "obj": {"tiles": 2, "parts": [["flange", "x", 0, 1, 4.1, [true, true], "pipe"], ["flange", "y", 0, 1, 4.1, [true, true], "pipe"], ["flange", "z", 15, 16, 4.1, [true, true], "pipe"], ["bend", [1, 1, 8], 7, 0, 90], ["bend", [8, 1, 15], 7, 180, 90, [2, 1]], ["bend", [1, 8, 15], 7, -90, 0, [0, 2]]]}, "textures": {"pipe": "wine_red_metal_plain", "flange": "large_inscribed_sandstone_block_plain", "orig": "wine_red_metal_plain"}},
+    {
+      "blocks": ["conquest:old_pipe"],
+      "cutout": true,
+      "item": true,
+      "elements": [{"from": [0, -16, 7.5], "to": [16, 0, 8.5], "faces": {"north": {"uv": [0, 0, 16, 16], "texture": "#particle"}, "south": {"uv": [0, 0, 16, 16], "texture": "#particle"}}}, {"from": [0, 0, 7.5], "to": [16, 16, 8.5], "faces": {"north": {"uv": [0, 0, 16, 16], "texture": "#particle"}, "south": {"uv": [0, 0, 16, 16], "texture": "#particle"}}}, {"from": [0, 16, 7.5], "to": [16, 32, 8.5], "faces": {"north": {"uv": [0, 0, 16, 16], "texture": "#particle"}, "south": {"uv": [0, 0, 16, 16], "texture": "#particle"}}}],
+      "textures": {"particle": {"material": "large_inscribed_sandstone_block", "mask": "minecraft:block/blue_stained_glass", "mask_min": 250}}
+    },
     {
       "blocks": ["architects:marble_lintel"],
       "item": true,
       "textures": {"side": "large_inscribed_sandstone_block", "top": "large_inscribed_sandstone_block"}
+    },
+    {
+      "blocks": ["architects:smooth_marble_column"],
+      "item": true,
+      "textures": {"side": "large_inscribed_sandstone_block_plain", "top": "large_inscribed_sandstone_block_plain"}
     },
     {
       "blocks": ["conquest:map_table_slab"],
@@ -208,24 +300,14 @@
       "blocks": ["conquest:yellow_pipe"],
       "when": {"toggle": "2", "facing": ["north", "east"]},
       "offset": [0, 0, -8],
-      "textures": {"cog": "light_gray_metal_grid_full", "beam": "light_gray_metal_grid_full", "beam_top": "light_gray_metal_grid_full"}
+      "textures": {"cog": "large_inscribed_sandstone_block_full", "beam": "large_inscribed_sandstone_block_full", "beam_top": "large_inscribed_sandstone_block_full"}
     },
     {
       "blocks": [
         "conquest:horizontal_metal_railings",
+        "conquest:horizontal_metal_railings_corner",
         "conquest:diagonal_metal_railings"
       ],
-      "when": {
-        "open": "false"
-      },
-      "upright": true,
-      "shade": true,
-      "textures": {
-        "side": "large_inscribed_sandstone_block"
-      }
-    },
-    {
-      "blocks": ["conquest:horizontal_metal_railings_corner"],
       "when": {
         "open": "false"
       },
@@ -233,18 +315,36 @@
       "y_offset": {
         "conquest:horizontal_metal_railings_corner": 270
       },
-      "elements": [{"from": [-3.3137000000000008, 11, 7.5], "to": [19.3137, 12, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 7, 7.5], "to": [19.3137, 8, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 14.5, 7.5], "to": [19.3137, 16, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [3.5, 0, 11.5], "to": [4.5, 15, 12.5], "faces": {"down": {"texture": "#side"}, "up": {"texture": "#side"}, "north": {"texture": "#side"}, "south": {"texture": "#side"}, "west": {"texture": "#side"}, "east": {"texture": "#side"}}}, {"from": [11.5, 0, 3.5], "to": [12.5, 15, 4.5], "faces": {"down": {"texture": "#side"}, "up": {"texture": "#side"}, "north": {"texture": "#side"}, "south": {"texture": "#side"}, "west": {"texture": "#side"}, "east": {"texture": "#side"}}}],
+      "shade": true,
       "textures": {
         "side": "large_inscribed_sandstone_block"
       }
     },
     {
-      "blocks": ["conquest:horizontal_metal_railings_corner"],
+      "blocks": ["conquest:horizontal_spruce_wood_railing_corner"],
+      "when": {
+        "open": "false"
+      },
+      "upright": true,
+      "y_offset": {
+        "conquest:horizontal_spruce_wood_railing_corner": 270
+      },
+      "elements": [{"from": [-3.3137000000000008, 11, 7.5], "to": [19.3137, 12, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 7, 7.5], "to": [19.3137, 8, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 14.5, 7.5], "to": [19.3137, 16, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [3.5, 0, 11.5], "to": [4.5, 15, 12.5], "faces": {"down": {"texture": "#texture"}, "up": {"texture": "#texture"}, "north": {"texture": "#texture"}, "south": {"texture": "#texture"}, "west": {"texture": "#texture"}, "east": {"texture": "#texture"}}}, {"from": [11.5, 0, 3.5], "to": [12.5, 15, 4.5], "faces": {"down": {"texture": "#texture"}, "up": {"texture": "#texture"}, "north": {"texture": "#texture"}, "south": {"texture": "#texture"}, "west": {"texture": "#texture"}, "east": {"texture": "#texture"}}}],
+      "textures": {
+        "texture": "large_inscribed_sandstone_block",
+        "particle": "large_inscribed_sandstone_block"
+      }
+    },
+    {
+      "blocks": ["conquest:horizontal_spruce_wood_railing_corner"],
       "when": {
         "open": "true"
       },
-      "elements": [{"from": [-3.3137000000000008, 11, 7.5], "to": [19.3137, 12, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 7, 7.5], "to": [19.3137, 8, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 14.5, 7.5], "to": [19.3137, 16, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#side", "uv": [0, 0, 16, 1]}, "up": {"texture": "#side", "uv": [0, 0, 16, 1]}, "north": {"texture": "#side", "uv": [0, 0, 16, 1]}, "south": {"texture": "#side", "uv": [0, 0, 16, 1]}, "west": {"texture": "#side", "uv": [0, 0, 1, 1]}, "east": {"texture": "#side", "uv": [0, 0, 1, 1]}}}, {"from": [3.5, 0, 11.5], "to": [4.5, 15, 12.5], "faces": {"down": {"texture": "#side"}, "up": {"texture": "#side"}, "north": {"texture": "#side"}, "south": {"texture": "#side"}, "west": {"texture": "#side"}, "east": {"texture": "#side"}}}, {"from": [11.5, 0, 3.5], "to": [12.5, 15, 4.5], "faces": {"down": {"texture": "#side"}, "up": {"texture": "#side"}, "north": {"texture": "#side"}, "south": {"texture": "#side"}, "west": {"texture": "#side"}, "east": {"texture": "#side"}}}],
-      "textures": {}
+      "elements": [{"from": [-3.3137000000000008, 11, 7.5], "to": [19.3137, 12, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 7, 7.5], "to": [19.3137, 8, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [-3.3137000000000008, 14.5, 7.5], "to": [19.3137, 16, 8.5], "rotation": {"origin": [8, 8, 8], "axis": "y", "angle": 45}, "faces": {"down": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "up": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "north": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "south": {"texture": "#texture", "uv": [0, 0, 16, 1]}, "west": {"texture": "#texture", "uv": [0, 0, 1, 1]}, "east": {"texture": "#texture", "uv": [0, 0, 1, 1]}}}, {"from": [3.5, 0, 11.5], "to": [4.5, 15, 12.5], "faces": {"down": {"texture": "#texture"}, "up": {"texture": "#texture"}, "north": {"texture": "#texture"}, "south": {"texture": "#texture"}, "west": {"texture": "#texture"}, "east": {"texture": "#texture"}}}, {"from": [11.5, 0, 3.5], "to": [12.5, 15, 4.5], "faces": {"down": {"texture": "#texture"}, "up": {"texture": "#texture"}, "north": {"texture": "#texture"}, "south": {"texture": "#texture"}, "west": {"texture": "#texture"}, "east": {"texture": "#texture"}}}],
+      "textures": {
+        "texture": "large_inscribed_sandstone_block",
+        "particle": "large_inscribed_sandstone_block"
+      }
     },
     {
       "blocks": ["conquest:metal_stairs"],
@@ -267,6 +367,8 @@
           "mask": "conquest:block/2_advanced_refined/2_metal/metal_grate"
         }
       }
-    }
+    },
+    {"blocks": ["conquest:ladder"], "item": true, "names": {"conquest:ladder": "White Metal Ladder"}, "elements": [{"from": [0.5, 0, 15], "to": [2.5, 2.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [0.5, 3.5, 15], "to": [2.5, 10.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [0.5, 11.5, 15], "to": [2.5, 16, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [0.5, 2.5, 15], "to": [1.0, 3.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [2.0, 2.5, 15], "to": [2.5, 3.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [0.5, 10.5, 15], "to": [1.0, 11.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [2.0, 10.5, 15], "to": [2.5, 11.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [13.5, 0, 15], "to": [15.5, 2.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [13.5, 3.5, 15], "to": [15.5, 10.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [13.5, 11.5, 15], "to": [15.5, 16, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [13.5, 2.5, 15], "to": [14.0, 3.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [15.0, 2.5, 15], "to": [15.5, 3.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [13.5, 10.5, 15], "to": [14.0, 11.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [15.0, 10.5, 15], "to": [15.5, 11.5, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [2.5, 6.25, 13.75], "to": [13.5, 7.75, 15.25], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [2.5, 14.25, 13.75], "to": [13.5, 15.75, 15.25], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}, {"from": [7.5, 0, 15.25], "to": [8.5, 16, 16], "faces": {"down": {"texture": "#down"}, "up": {"texture": "#down"}, "north": {"texture": "#down"}, "south": {"texture": "#down", "cullface": "south"}, "west": {"texture": "#down"}, "east": {"texture": "#down"}}}], "textures": {"down": "large_inscribed_sandstone_block", "particle": "large_inscribed_sandstone_block"}},
+    {"blocks": ["conquest:wooden_wheel"], "item": true, "names": {"conquest:wooden_wheel": "Lifebuoy"}, "obj": {"parts": [["torus", [8, 8, 14], 6, 2, 32, -33.75, [[6, "pipe"], [2, "flange"], [6, "pipe"], [2, "flange"], [6, "pipe"], [2, "flange"], [6, "pipe"], [2, "flange"]]]]}, "textures": {"pipe": "buoy_red_plain", "flange": "buoy_white_plain", "orig": "buoy_white_plain"}}
   ]
 }

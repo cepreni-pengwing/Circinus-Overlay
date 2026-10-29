@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel"
+    },
+    "facing=east": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "circinus:block/retex/48/conquest/block/wooden_wheel",
+      "x": 90
+    }
+  }
+}

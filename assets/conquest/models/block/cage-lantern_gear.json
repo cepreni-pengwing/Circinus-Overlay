@@ -5,9 +5,9 @@
   "flip-v": true,
   "textures": {
     "particle": "#cog",
-    "beam_top": "circinus:block/light_gray_metal_grid_full",
-    "cog": "circinus:block/light_gray_metal_grid_full",
-    "beam": "circinus:block/light_gray_metal_grid_full"
+    "beam_top": "circinus:block/large_inscribed_sandstone_block_full",
+    "cog": "circinus:block/large_inscribed_sandstone_block_full",
+    "beam": "circinus:block/large_inscribed_sandstone_block_full"
   },
   "display": {
     "gui": {

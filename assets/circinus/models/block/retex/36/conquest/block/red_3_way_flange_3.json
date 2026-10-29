@@ -1,0 +1,12 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/retex/36/conquest/block/red_3_way_flange_3.obj",
+  "textures": {
+    "pipe": "circinus:block/wine_red_metal_plain",
+    "flange": "circinus:block/large_inscribed_sandstone_block_plain",
+    "orig": "circinus:block/wine_red_metal_plain",
+    "particle": "circinus:block/wine_red_metal_plain"
+  }
+}

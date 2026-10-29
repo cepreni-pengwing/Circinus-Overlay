@@ -1,0 +1,12 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/retex/48/conquest/block/wooden_wheel.obj",
+  "textures": {
+    "pipe": "circinus:block/buoy_red_plain",
+    "flange": "circinus:block/buoy_white_plain",
+    "orig": "circinus:block/buoy_white_plain",
+    "particle": "circinus:block/buoy_red_plain"
+  }
+}

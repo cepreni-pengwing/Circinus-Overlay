@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=1": {
+      "model": "circinus:block/retex/39/architects/block/smooth_marble_column"
+    },
+    "variant=2": {
+      "model": "circinus:block/retex/39/architects/block/smooth_marble_column_base"
+    },
+    "variant=3": {
+      "model": "circinus:block/retex/39/architects/block/smooth_marble_column_capital"
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "variants": {
+    "toggle=1,facing=south": [
+      {
+        "model": "circinus:block/retex/20/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/20/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/20/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/20/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=1,facing=west": [
+      {
+        "model": "circinus:block/retex/21/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/21/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/21/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/21/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=1,facing=north": [
+      {
+        "model": "circinus:block/retex/18/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/18/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/18/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/18/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=1,facing=east": [
+      {
+        "model": "circinus:block/retex/19/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/19/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/19/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/19/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=2,facing=south": [
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=2,facing=west": [
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=2,facing=north": [
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/22/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=2,facing=east": [
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/23/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=3,facing=south": [
+      {
+        "model": "circinus:block/retex/25/conquest/block/red_mounted_pipe_a"
+      },
+      {
+        "model": "circinus:block/retex/25/conquest/block/red_mounted_pipe_a_1"
+      },
+      {
+        "model": "circinus:block/retex/25/conquest/block/red_mounted_pipe_a_2"
+      },
+      {
+        "model": "circinus:block/retex/25/conquest/block/red_mounted_pipe_a_3"
+      }
+    ],
+    "toggle=3,facing=west": [
+      {
+        "model": "circinus:block/retex/27/conquest/block/red_mounted_pipe_a"
+      },
+      {
+        "model": "circinus:block/retex/27/conquest/block/red_mounted_pipe_a_1"
+      },
+      {
+        "model": "circinus:block/retex/27/conquest/block/red_mounted_pipe_a_2"
+      },
+      {
+        "model": "circinus:block/retex/27/conquest/block/red_mounted_pipe_a_3"
+      }
+    ],
+    "toggle=3,facing=north": [
+      {
+        "model": "circinus:block/retex/24/conquest/block/red_mounted_pipe_a"
+      },
+      {
+        "model": "circinus:block/retex/24/conquest/block/red_mounted_pipe_a_1"
+      },
+      {
+        "model": "circinus:block/retex/24/conquest/block/red_mounted_pipe_a_2"
+      },
+      {
+        "model": "circinus:block/retex/24/conquest/block/red_mounted_pipe_a_3"
+      }
+    ],
+    "toggle=3,facing=east": [
+      {
+        "model": "circinus:block/retex/26/conquest/block/red_mounted_pipe_a"
+      },
+      {
+        "model": "circinus:block/retex/26/conquest/block/red_mounted_pipe_a_1"
+      },
+      {
+        "model": "circinus:block/retex/26/conquest/block/red_mounted_pipe_a_2"
+      },
+      {
+        "model": "circinus:block/retex/26/conquest/block/red_mounted_pipe_a_3"
+      }
+    ],
+    "toggle=4,facing=south": [
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=4,facing=west": [
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=4,facing=north": [
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/28/conquest/block/red_mounted_pipe_3"
+      }
+    ],
+    "toggle=4,facing=east": [
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_1"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_2"
+      },
+      {
+        "model": "circinus:block/retex/29/conquest/block/red_mounted_pipe_3"
+      }
+    ]
+  }
+}

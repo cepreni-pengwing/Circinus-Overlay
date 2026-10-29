@@ -1,0 +1,7 @@
+{
+  "parent": "architects:block/smooth_column_inventory",
+  "textures": {
+    "side": "circinus:block/large_inscribed_sandstone_block_plain",
+    "top": "circinus:block/large_inscribed_sandstone_block_plain"
+  }
+}

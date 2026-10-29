@@ -1,8 +1,0 @@
-{
-  "parent": "circinus:block/uv/conquest/block/templates/parent_vertical_slab_6",
-  "textures": {
-    "bottom": "circinus:block/light_gray_metal_grid",
-    "side": "circinus:block/light_gray_metal_grid",
-    "top": "circinus:block/light_gray_metal_grid"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "circinus:block/uv/conquest/block/templates/parent_sphere_small",
-  "textures": {
-    "side": "circinus:block/light_gray_metal_grid"
-  }
-}

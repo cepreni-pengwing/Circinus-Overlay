@@ -240,6 +240,16 @@ def process(t, size):
             kd, kl = k if isinstance(k, list) else (k, k)
             f = h.point(lambda v: max(0, min(255, round(128 * (1 - (kd if curve(v) > 0 else kl) * curve(v))))))
             rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['f'] / 128, c=F(ch), f=F(f)).convert('L') for ch in rgb.split()])
+        if t.get('bands'):
+            amp, jit = t['bands']
+            r = random.Random(zlib.crc32(t['name'].encode()))
+            ph = [(fq, r.uniform(0, 2 * math.pi), r.uniform(0.3, 1) / fq ** 0.6) for fq in range(2, 40)]
+            pr = [sum(av * math.sin(2 * math.pi * fq * x / size[0] + q) for fq, q, av in ph) for x in range(size[0])]
+            mx = max(abs(v) for v in pr)
+            row = Image.new('L', (size[0], 1))
+            row.putdata([max(0, min(255, round(128 * (1 + amp * v / mx + jit * r.uniform(-1, 1))))) for v in pr])
+            f = row.resize(size, Image.NEAREST)
+            rgb = Image.merge('RGB', [ImageMath.lambda_eval(lambda a: a['c'] * a['f'] / 128, c=F(ch), f=F(f)).convert('L') for ch in rgb.split()])
         return spec_layers(t, rgb.convert('RGBA'), arm, nrm), e, e
     y, py, d8, e, paint = analyse(rgb)
     noise = tile_noise(size, t.get('erosion_cells', 6), zlib.crc32(t['name'].encode()))
@@ -330,6 +340,128 @@ def write_layers(layers, pick, name, gw, gh):
         f.write(f'method=repeat\nwidth={gw}\nheight={gh}\ntiles=1-{gw * gh}\nmatchTiles={NS}:textures/block/{name}\n')
 
 
+def obj_mesh(parts, boxes, sides=12, tiles=1, t0=0):
+    v, vt, vn, f = [], [], [], []
+    cnt = [t0]
+    def vert(p, n, uv):
+        v.append(tuple(c / 16 for c in p)); vn.append(n); vt.append(uv)
+        return len(v)
+    def norm(x):
+        l = math.sqrt(sum(c * c for c in x)) or 1
+        return tuple(c / l for c in x)
+    def cross(a, b):
+        return (a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0])
+    def basis(t):
+        h = (0, 1, 0) if abs(t[1]) < 0.9 else (1, 0, 0)
+        n1 = norm(cross(t, h))
+        return n1, cross(n1, t)
+    def ring(c, n1, n2, r):
+        out = []
+        for k in range(sides + 1):
+            a = 2 * math.pi * k / sides
+            d = tuple(math.cos(a) * n1[i] + math.sin(a) * n2[i] for i in range(3))
+            out.append((tuple(c[i] + r * d[i] for i in range(3)), d, k / sides))
+        return out
+    def sweep(path, r, mat, caps=(False, False)):
+        ti = cnt[0] % (tiles * tiles)
+        cnt[0] += 1
+        tv = lambda uv: ((ti % tiles + uv[0]) / tiles, (ti // tiles + uv[1]) / tiles)
+        length, rings = 0, []
+        for j, (c, n1, n2) in enumerate(path):
+            if j:
+                length += math.dist(c, path[j - 1][0])
+            rings.append((ring(c, n1, n2, r), length / 16))
+        for (ra, va), (rb, vb) in zip(rings, rings[1:]):
+            for k in range(sides):
+                q = [vert(ra[k][0], ra[k][1], tv((ra[k][2], va))), vert(rb[k][0], rb[k][1], tv((rb[k][2], vb))),
+                     vert(rb[k + 1][0], rb[k + 1][1], tv((rb[k + 1][2], vb))), vert(ra[k + 1][0], ra[k + 1][1], tv((ra[k + 1][2], va)))]
+                f.append((mat, q))
+        for (c, n1, n2), use, sg in ((path[0], caps[0], -1), (path[-1], caps[1], 1)):
+            if use:
+                t = cross(n2, n1)
+                nn = tuple(sg * x for x in t)
+                rg = ring(c, n1, n2, r)
+                ci = vert(c, nn, tv((0.5, 0.5)))
+                for k in range(sides):
+                    a, b = rg[k], rg[k + 1]
+                    ia = vert(a[0], nn, tv((0.5 + a[1][0] * r / 16, 0.5 + a[1][2] * r / 16)))
+                    ib = vert(b[0], nn, tv((0.5 + b[1][0] * r / 16, 0.5 + b[1][2] * r / 16)))
+                    f.append((mat, (ci, ia, ib) if sg < 0 else (ci, ib, ia)))
+    ax = {'x': (1, 0, 0), 'y': (0, 1, 0), 'z': (0, 0, 1)}
+    for pt in parts:
+        kind = pt[0]
+        if kind in ('tube', 'flange'):
+            axis, a0, a1 = pt[1], pt[2], pt[3]
+            t = ax[axis]
+            n1, n2 = basis(t)
+            cen = lambda s: tuple(8 + (s - 8) * t[i] for i in range(3))
+            r = pt[4] if len(pt) > 4 else (4.1 if kind == 'flange' else 3.1)
+            caps = (True, True) if kind == 'flange' else tuple(pt[5]) if len(pt) > 5 else (False, False)
+            mat = pt[6] if len(pt) > 6 else ('flange' if kind == 'flange' else 'pipe')
+            n = max(1, math.ceil(abs(a1 - a0) / 16 - 1e-9))
+            for j in range(n):
+                s0, s1 = a0 + (a1 - a0) * j / n, a0 + (a1 - a0) * (j + 1) / n
+                sweep([(cen(s0), n1, n2), (cen(s1), n1, n2)], r, mat, (caps[0] and j == 0, caps[1] and j == n - 1))
+        elif kind == 'torus':
+            c, R, r, n, a0, runs = pt[1:7]
+            pos = lambda th, ph: tuple(c[i] + [(R + r * math.cos(ph)) * math.cos(th), (R + r * math.cos(ph)) * math.sin(th), r * math.sin(ph)][i] for i in range(3))
+            nrm = lambda th, ph: (math.cos(ph) * math.cos(th), math.cos(ph) * math.sin(th), math.sin(ph))
+            seg, s = 2 * math.pi * R / n / 16, 0
+            for cnt, mat in runs:
+                for j in range(cnt):
+                    t0, t1 = math.radians(a0 + 360 * s / n), math.radians(a0 + 360 * (s + 1) / n)
+                    for k in range(sides):
+                        p0, p1 = 2 * math.pi * k / sides, 2 * math.pi * (k + 1) / sides
+                        v0, v1 = k / sides * 2 * math.pi * r / 16, (k + 1) / sides * 2 * math.pi * r / 16
+                        corners4 = [(t0, p0, j * seg, v0), (t1, p0, (j + 1) * seg, v0), (t1, p1, (j + 1) * seg, v1), (t0, p1, j * seg, v1)]
+                        P = [pos(th, ph) for th, ph, _, _ in corners4]
+                        fn = cross(tuple(P[1][i] - P[0][i] for i in range(3)), tuple(P[2][i] - P[0][i] for i in range(3)))
+                        mid = nrm((t0 + t1) / 2, (p0 + p1) / 2)
+                        if sum(fn[i] * mid[i] for i in range(3)) < 0:
+                            corners4.reverse()
+                        f.append((mat, [vert(pos(th, ph), nrm(th, ph), (u, vv)) for th, ph, u, vv in corners4]))
+                    s += 1
+        elif kind == 'bend':
+            c, rb, a0, a1 = pt[1], pt[2], pt[3], pt[4]
+            i, j2 = pt[5] if len(pt) > 5 else (0, 1)
+            k = 3 - i - j2
+            path = []
+            for j in range(13):
+                th = math.radians(a0 + (a1 - a0) * j / 12)
+                p0, t, n1 = list(c), [0, 0, 0], [0, 0, 0]
+                p0[i] += rb * math.cos(th)
+                p0[j2] += rb * math.sin(th)
+                t[i], t[j2] = -math.sin(th) * (a1 - a0), math.cos(th) * (a1 - a0)
+                n1[k] = 1 if (i, j2) in ((0, 1), (1, 2), (2, 0)) else -1
+                t, n1 = norm(t), tuple(n1)
+                path.append((tuple(p0), n1, cross(n1, t)))
+            sweep(path, 3.1, 'pipe')
+    corners = {
+        'north': lambda a, b: [(b[0], b[1], a[2]), (a[0], b[1], a[2]), (a[0], a[1], a[2]), (b[0], a[1], a[2])],
+        'south': lambda a, b: [(a[0], b[1], b[2]), (b[0], b[1], b[2]), (b[0], a[1], b[2]), (a[0], a[1], b[2])],
+        'west': lambda a, b: [(a[0], b[1], a[2]), (a[0], b[1], b[2]), (a[0], a[1], b[2]), (a[0], a[1], a[2])],
+        'east': lambda a, b: [(b[0], b[1], b[2]), (b[0], b[1], a[2]), (b[0], a[1], a[2]), (b[0], a[1], b[2])],
+        'up': lambda a, b: [(a[0], b[1], a[2]), (b[0], b[1], a[2]), (b[0], b[1], b[2]), (a[0], b[1], b[2])],
+        'down': lambda a, b: [(a[0], a[1], b[2]), (b[0], a[1], b[2]), (b[0], a[1], a[2]), (a[0], a[1], a[2])],
+    }
+    normals = {'north': (0, 0, -1), 'south': (0, 0, 1), 'west': (-1, 0, 0), 'east': (1, 0, 0), 'up': (0, 1, 0), 'down': (0, -1, 0)}
+    for el in boxes:
+        for face, fc in el['faces'].items():
+            u1, v1, u2, v2 = fc.get('uv', (0, 0, 16, 16))
+            uvs = [(u1, v1), (u2, v1), (u2, v2), (u1, v2)]
+            k = fc.get('rotation', 0) // 90
+            uvs = uvs[-k:] + uvs[:-k] if k else uvs
+            f.append(('orig', [vert(p, normals[face], (uv[0] / 16, 1 - uv[1] / 16)) for p, uv in reversed(list(zip(corners[face](el['from'], el['to']), uvs)))]))
+    out = ['mtllib pipe.mtl', 'o pipe']
+    out += ['v %.5f %.5f %.5f' % x for x in v] + ['vt %.5f %.5f' % x for x in vt] + ['vn %.5f %.5f %.5f' % x for x in vn]
+    cur = None
+    for mat, q in f:
+        if mat != cur:
+            out.append(f'usemtl {mat}'); cur = mat
+        out.append('f ' + ' '.join(f'{i}/{i}/{i}' for i in q))
+    return '\n'.join(out) + '\n'
+
+
 def main():
     cfg = json.load(open(os.path.join(ROOT, 'src/mappings.json'), encoding='utf-8'))
     a = Assets(sources(sys.argv))
@@ -349,6 +481,20 @@ def main():
         if not edge:
             layers, e, w = process(t, (gw * TILE, gh * TILE))
             write_layers(layers, w if t.get('rust') else ImageOps.invert(e), name, gw, gh)
+            if t.get('shifted'):
+                dx, dy = gw * TILE // 2, gh * TILE // 2
+                pick = w if t.get('rust') else ImageOps.invert(e)
+                write_layers({k: ImageChops.offset(im, dx, dy) for k, im in layers.items()}, ImageChops.offset(pick, dx, dy), f'{name}_shift', gw, gh)
+            if t.get('plain'):
+                k = t['plain']
+                hl, hp = layers, (w if t.get('rust') else ImageOps.invert(e))
+                if t.get('shifted'):
+                    hl = {kk: ImageChops.offset(im, gw * TILE // 2, gh * TILE // 2) for kk, im in hl.items()}
+                    hp = ImageChops.offset(hp, gw * TILE // 2, gh * TILE // 2)
+                small = hp.resize((gw, gh), Image.BOX).tobytes()
+                bi = max(range(gw * gh), key=lambda i: small[i])
+                for sfx, img in hl.items():
+                    ImageChops.offset(img, -(bi % gw) * TILE, -(bi // gw) * TILE).crop((0, 0, k * TILE, k * TILE)).save(out(f'assets/{NS}/textures/block/{name}_plain{sfx}.png'))
         n_blocks = n_models = 0
         for fam in t['targets']:
             ns, block = fam.split(':')
@@ -420,6 +566,8 @@ def main():
         mns, mp = v['mask'].split(':')
         key = f"block/masked/{v['material']}/{mp.rsplit('/', 1)[1]}"
         mask = Image.open(io.BytesIO(a.blob(f'assets/{mns}/textures/{mp}.png'))).convert('RGBA').split()[3]
+        if v.get('mask_min'):
+            mask = mask.point(lambda x: 255 if x >= v['mask_min'] else 0)
         for sfx in ('', '_n', '_s'):
             img = Image.open(out(f"assets/{NS}/textures/block/{v['material']}{sfx}.png")).convert('RGBA').resize(mask.size, Image.NEAREST)
             if sfx == '':
@@ -455,12 +603,27 @@ def main():
                     var = json.loads(json.dumps(src))
                     bs['variants'][k] = var
                 for x in (var if isinstance(var, list) else [var]):
-                    m = x['model']
+                    m = rt.get('source', x['model'])
                     copy = f"{NS}:block/retex/{ri}/{m.replace(':', '/')}"
-                    copies[m] = copy
+                    copies[m] = copies[x['model']] = copy
                     md = json.loads(json.dumps(a.json(model_path(m))))
                     md['textures'] = {kk: (tex_ref(rt['textures'][kk]) if kk in rt['textures'] else vv) for kk, vv in md.get('textures', {}).items()}
-                    if rt.get('offset') and md.get('loader'):
+                    if rt.get('obj'):
+                        src_m = md
+                        while 'elements' not in src_m and src_m.get('parent'):
+                            src_m = a.json(model_path(src_m['parent']))
+                        keep = [e for i, e in enumerate(src_m.get('elements', [])) if i in rt['obj'].get('keep', [])]
+                        cp = copy.split(':', 1)[1]
+                        nt = rt['obj'].get('tiles', 1)
+                        for ti in range(nt * nt):
+                            with open(out(f'assets/{NS}/models/{cp}{"_" + str(ti) if ti else ""}.obj'), 'w', newline='\n') as fo:
+                                fo.write(obj_mesh(rt['obj']['parts'], keep, tiles=nt, t0=ti))
+                        with open(out(f'assets/{NS}/models/{cp.rsplit("/", 1)[0]}/pipe.mtl'), 'w', newline='\n') as fo:
+                            fo.write('newmtl pipe\nmap_Kd #pipe\nnewmtl flange\nmap_Kd #flange\nnewmtl orig\nmap_Kd #orig\n')
+                        orig = md.get('textures', {}).get('orig') or json.loads(json.dumps(a.json(model_path(m)))).get('textures', {}).get('pipe')
+                        md = {'loader': 'porting_lib:obj', 'flip_v': True, 'automaticCulling': False, 'model': f'{NS}:models/{cp}.obj',
+                              'textures': {'pipe': tex_ref(rt['textures']['pipe']), 'flange': tex_ref(rt['textures'].get('flange', rt['textures']['pipe'])), 'orig': tex_ref(rt['textures']['orig']) if 'orig' in rt['textures'] else orig, 'particle': tex_ref(rt['textures']['pipe'])}}
+                    elif rt.get('offset') and md.get('loader'):
                         ons, op = md['model'].split(':')
                         od = op.rsplit('/', 1)[0]
                         obj = a.raw(f'assets/{ons}/{op}')
@@ -485,6 +648,9 @@ def main():
                         md['elements'] = [{k: v for k, v in el.items() if k != 'shade'} for el in src_m.get('elements', [])]
                     wjson(model_path(copy), md)
                     x['model'] = copy
+                    if rt.get('no_rotation'):
+                        x.pop('x', None)
+                        x.pop('y', None)
                     if rt.get('upright'):
                         x.pop('x', None)
                         y = (x.get('y', 0) + rt.get('y_offset', {}).get(bid, 0)) % 360
@@ -492,6 +658,12 @@ def main():
                             x['y'] = y
                         else:
                             x.pop('y', None)
+                    if rt.get('obj') and rt['obj'].get('tiles', 1) > 1:
+                        alts = [copy]
+                        for ti in range(1, rt['obj']['tiles'] ** 2):
+                            wjson(model_path(f'{copy}_{ti}'), dict(md, model=md['model'][:-4] + f'_{ti}.obj'))
+                            alts.append(f'{copy}_{ti}')
+                        bs['variants'][k] = [dict(x, model=c) for c in alts]
             wjson(path, bs)
             written[path] = bs
             item = a.json(f'assets/{ns}/models/item/{block}.json')
@@ -586,6 +758,42 @@ def main():
                 lines.append(f'layer.{layer}=' + ' '.join(ids))
         with open(out('assets/minecraft/optifine/block.properties'), 'w', newline='\n') as f:
             f.write('\n'.join(lines) + '\n')
+    for d in cfg.get('doors', []):
+        mat = next(x for x in cfg['textures'] if x['name'] == d['material'])
+        px = lambda v: round(v * TILE / 16)
+        fw, (wx0, wy0, wx1, wy1), bw = px(d['frame']), [px(v) for v in d['window']], px(d['bar'])
+        frame = Image.new('L', (TILE, TILE), 0)
+        frame.paste(255, (0, 0, fw, TILE))
+        frame.paste(255, (TILE - fw, 0, TILE, TILE))
+        parts = {}
+        for part, ti in (('top', 1), ('bottom', 1 + mat['grid'][0])):
+            fm = frame.copy()
+            hole = Image.new('L', (TILE, TILE), 255)
+            if part == 'top':
+                fm.paste(255, (0, 0, TILE, fw))
+                cx, cy = (wx0 + wx1) // 2, (wy0 + wy1) // 2
+                hole.paste(0, (wx0, wy0, wx1, wy1))
+                hole.paste(255, (cx - bw // 2, wy0, cx - bw // 2 + bw, wy1))
+                hole.paste(255, (wx0, cy - bw // 2, wx1, cy - bw // 2 + bw))
+                fm.paste(255, (cx - bw // 2, wy0, cx - bw // 2 + bw, wy1))
+                fm.paste(255, (wx0, cy - bw // 2, wx1, cy - bw // 2 + bw))
+            ns, tp = d[part].split(':')
+            for sfx in ('', '_n', '_s'):
+                img = Image.open(out(f"assets/minecraft/optifine/ctm/{NS}/{d['material']}/{ti}{sfx}.png")).convert('RGBA')
+                if sfx == '':
+                    img = Image.composite(img.point(lambda v: round(v * d['shade'])).convert('RGBA'), img, fm)
+                    img.putalpha(ImageChops.multiply(img.split()[3], hole))
+                    parts[part] = img
+                img.save(out(f'assets/{ns}/textures/{tp}{sfx}.png'))
+        icon = Image.new('RGBA', (TILE, TILE), (0, 0, 0, 0))
+        tall = Image.new('RGBA', (TILE, 2 * TILE))
+        tall.paste(parts['top'], (0, 0))
+        tall.paste(parts['bottom'], (0, TILE))
+        icon.paste(tall.resize((TILE // 2, TILE), Image.LANCZOS), (TILE // 4, 0))
+        ins, ip = d['item'].split(':')
+        icon.save(out(f'assets/{ins}/textures/{ip}.png'))
+        lang.setdefault(d['block'].split(':')[0], {})[f"block.{d['block'].replace(':', '.')}"] = d['name']
+        tab.append(d['block'])
     for p in glob.glob(os.path.join(ROOT, 'src', 'assets', '*', 'blockstates', '*.json')):
         tab.append(f"{p.split(os.sep)[-3]}:{os.path.basename(p)[:-5]}")
     for nid, nm in cfg.get('names', {}).items():

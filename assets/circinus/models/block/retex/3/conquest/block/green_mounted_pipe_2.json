@@ -1,0 +1,12 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/retex/3/conquest/block/green_mounted_pipe_2.obj",
+  "textures": {
+    "pipe": "circinus:block/mossy_sandstone_plain",
+    "flange": "circinus:block/large_inscribed_sandstone_block_plain",
+    "orig": "conquest:block/2_advanced_refined/2_metal/pipe_green",
+    "particle": "circinus:block/mossy_sandstone_plain"
+  }
+}

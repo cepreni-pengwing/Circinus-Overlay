@@ -1,0 +1,108 @@
+{
+  "variants": {
+    "facing=south": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2",
+        "y": 180
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2",
+        "y": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3",
+        "y": 270
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve"
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1"
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2"
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3"
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2",
+        "y": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3",
+        "y": 90
+      }
+    ],
+    "facing=down": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2",
+        "x": 90
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3",
+        "x": 90
+      }
+    ],
+    "facing=up": [
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve",
+        "x": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_1",
+        "x": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_2",
+        "x": 270
+      },
+      {
+        "model": "circinus:block/retex/34/conquest/block/red_gate_valve_3",
+        "x": 270
+      }
+    ]
+  }
+}
