@@ -1,5 +1,6 @@
 import glob, io, json, math, os, random, re, shutil, sys, zipfile, zlib
 from PIL import Image, ImageChops, ImageFilter, ImageMath, ImageOps
+import control_panel
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NS = 'circinus'
@@ -760,6 +761,7 @@ def main():
             cutout.append(b['id'])
             tab.append(b['id'])
         print(f"glyphs {font}: {len(chars)} Zeichen, Skalierung {sc:.3f}")
+    control_panel.generate(ROOT, out, lang, cutout, tab)
     if cutout or translucent:
         base = a.raw('assets/minecraft/optifine/block.properties') or ''
         lines = [l for l in base.splitlines() if l.strip() and not l.lstrip().startswith('#')]

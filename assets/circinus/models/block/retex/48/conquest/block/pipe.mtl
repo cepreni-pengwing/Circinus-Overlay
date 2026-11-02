@@ -1,6 +1,0 @@
-newmtl pipe
-map_Kd #pipe
-newmtl flange
-map_Kd #flange
-newmtl orig
-map_Kd #orig

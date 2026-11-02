@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "circinus:block/life_preserver/life_preserver"
+    },
+    "facing=east": {
+      "model": "circinus:block/life_preserver/life_preserver",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "circinus:block/life_preserver/life_preserver",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "circinus:block/life_preserver/life_preserver",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "circinus:block/life_preserver/life_preserver",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "circinus:block/life_preserver/life_preserver",
+      "x": 90
+    }
+  }
+}

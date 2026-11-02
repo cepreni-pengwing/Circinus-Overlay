@@ -1,0 +1,4 @@
+newmtl ring
+map_Kd #ring
+newmtl rope
+map_Kd #rope

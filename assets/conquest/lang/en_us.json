@@ -256,7 +256,10 @@
   "block.conquest.smooth_large_sandstone_block_vertical_slab": "Rusty Light Blue Metal Vertical Slab",
   "block.conquest.smooth_large_sandstone_block_wall": "Rusty Light Blue Metal Wall",
   "block.conquest.terracotta_bowls": "Red Metal Letters Q\u2013Z",
+  "block.conquest.tudor_cross_frame_vertical_corner": "Control Panel Corner",
+  "block.conquest.tudor_cross_frame_vertical_quarter": "Control Panel",
+  "block.conquest.tudor_cross_frame_vertical_slab": "Control Panel Extension",
   "block.conquest.wooden_bowls": "Dark Blue Metal Letters Q\u2013Z",
-  "block.conquest.wooden_wheel": "Lifebuoy",
+  "block.conquest.wooden_wheel": "Life Preserver",
   "block.conquest.yellow_pipe": "White Metal Wheel"
 }

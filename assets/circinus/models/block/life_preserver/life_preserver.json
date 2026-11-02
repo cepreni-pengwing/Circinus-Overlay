@@ -1,0 +1,12 @@
+{
+  "credit": "Life preserver model by xone, used with permission",
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/life_preserver/life_preserver.obj",
+  "textures": {
+    "ring": "circinus:block/life_preserver",
+    "rope": "circinus:block/life_preserver_rope",
+    "particle": "circinus:block/life_preserver"
+  }
+}

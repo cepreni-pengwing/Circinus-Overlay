@@ -1,0 +1,27 @@
+{
+  "loader": "porting_lib:obj",
+  "flip_v": true,
+  "automaticCulling": false,
+  "model": "circinus:models/block/control_panel/panel_screen_1.obj",
+  "textures": {
+    "p": "circinus:block/control_panel/plating",
+    "s": "circinus:block/control_panel/screen_1",
+    "d": "circinus:block/control_panel/plating_dark",
+    "c": "circinus:block/corrugated_metal",
+    "particle": "circinus:block/control_panel/plating",
+    "f3d3d3d": "circinus:block/control_panel/f3d3d3d",
+    "f1b1b1b": "circinus:block/control_panel/f1b1b1b",
+    "f3d3d3d_v1": "circinus:block/control_panel/f3d3d3d_v1",
+    "dk_v1": "circinus:block/control_panel/dk_v1",
+    "f272727_v1": "circinus:block/control_panel/f272727_v1",
+    "f134c4c_v1": "circinus:block/control_panel/f134c4c_v1",
+    "f134c4c": "circinus:block/control_panel/f134c4c",
+    "dk_v4": "circinus:block/control_panel/dk_v4",
+    "f0069aa_v4": "circinus:block/control_panel/f0069aa_v4",
+    "fe69c69_v4": "circinus:block/control_panel/fe69c69_v4",
+    "ff9e6cf_v4": "circinus:block/control_panel/ff9e6cf_v4",
+    "f858585_v4": "circinus:block/control_panel/f858585_v4",
+    "ff6ca9f_v4": "circinus:block/control_panel/ff6ca9f_v4",
+    "fb4b4b4_v4": "circinus:block/control_panel/fb4b4b4_v4"
+  }
+}

@@ -5,3 +5,5 @@ Resource pack overlay for Conquest Reforged, made for the **Circinus** project o
 Load it above ACRP.
 
 Source textures from [Poly Haven](https://polyhaven.com/) and [TextureCan](https://texturecan.com/), licensed CC0.
+
+Life preserver model by xone, used with permission.

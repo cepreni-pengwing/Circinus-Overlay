@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=south,layer=1": {
+      "model": "circinus:block/control_panel/panel_5"
+    },
+    "facing=west,layer=1": {
+      "model": "circinus:block/control_panel/panel_5",
+      "y": 90
+    },
+    "facing=north,layer=1": {
+      "model": "circinus:block/control_panel/panel_5",
+      "y": 180
+    },
+    "facing=east,layer=1": {
+      "model": "circinus:block/control_panel/panel_5",
+      "y": 270
+    },
+    "facing=south,layer=2": {
+      "model": "circinus:block/control_panel/panel_6"
+    },
+    "facing=west,layer=2": {
+      "model": "circinus:block/control_panel/panel_6",
+      "y": 90
+    },
+    "facing=north,layer=2": {
+      "model": "circinus:block/control_panel/panel_6",
+      "y": 180
+    },
+    "facing=east,layer=2": {
+      "model": "circinus:block/control_panel/panel_6",
+      "y": 270
+    },
+    "facing=south,layer=3": {
+      "model": "circinus:block/control_panel/panel_7"
+    },
+    "facing=west,layer=3": {
+      "model": "circinus:block/control_panel/panel_7",
+      "y": 90
+    },
+    "facing=north,layer=3": {
+      "model": "circinus:block/control_panel/panel_7",
+      "y": 180
+    },
+    "facing=east,layer=3": {
+      "model": "circinus:block/control_panel/panel_7",
+      "y": 270
+    },
+    "facing=south,layer=4": {
+      "model": "circinus:block/control_panel/panel_off"
+    },
+    "facing=west,layer=4": {
+      "model": "circinus:block/control_panel/panel_off",
+      "y": 90
+    },
+    "facing=north,layer=4": {
+      "model": "circinus:block/control_panel/panel_off",
+      "y": 180
+    },
+    "facing=east,layer=4": {
+      "model": "circinus:block/control_panel/panel_off",
+      "y": 270
+    }
+  }
+}

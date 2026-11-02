@@ -261,7 +261,6 @@
         "conquest:horizontal_spruce_wood_railing_corner",
         "conquest:metal_stairs",
         "conquest:ladder",
-        "conquest:wooden_wheel",
         "architects:diagonal_mangrove_beam_brace",
         "architects:horizontal_diagonal_mangrove_platform",
         "architects:horizontal_mangrove_beam",
@@ -299,9 +298,13 @@
         "conquest:dark_wooden_bowls",
         "conquest:large_red_plastered_roman_oven",
         "conquest:terracotta_bowls",
+        "conquest:tudor_cross_frame_vertical_quarter",
+        "conquest:tudor_cross_frame_vertical_corner",
+        "conquest:tudor_cross_frame_vertical_slab",
         "minecraft:birch_door",
         "conquest:pinata",
-        "conquest:simple_warp_weighted_loom"
+        "conquest:simple_warp_weighted_loom",
+        "conquest:wooden_wheel"
       ]
     }
   ]
